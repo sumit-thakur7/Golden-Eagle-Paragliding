@@ -4,29 +4,13 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-
-const faqs = [
-  {
-    question: "Is paragliding safe?",
-    answer:
-      "Yes, paragliding is very safe when conducted by certified professionals using modern equipment. We adhere to strict international safety standards, and our pilots are highly experienced. All equipment is regularly inspected and maintained.",
-  },
-  {
-    question: "What should I wear for my flight?",
-    answer:
-      "We recommend wearing comfortable, sturdy shoes (like hiking boots or sneakers), long pants, and a windproof jacket. Even on a warm day, it can be cooler at altitude. Sunglasses are also recommended.",
-  },
-  {
-    question: "Do I need any prior experience to do a tandem flight?",
-    answer:
-      "Absolutely not! For a tandem flight, you need no prior experience. Your certified pilot will handle all the technical aspects of the flight. You just need to sit back, relax, and enjoy the incredible views.",
-  },
-  {
-    question: "Is there a weight limit for tandem paragliding?",
-    answer:
-      "Yes, for safety reasons, there is a weight limit. The typical range is between 25 kg (55 lbs) and 95 kg (210 lbs). Please contact us if you have any concerns about the weight limit.",
-  },
-];
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from "@/components/ui/tabs";
+import { faqData } from "@/lib/faq-data";
 
 export default function FaqPage() {
   return (
@@ -37,26 +21,95 @@ export default function FaqPage() {
         </h1>
         <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
           Have questions? We have answers. Here are some of the most common
-          inquiries we receive.
+          inquiries we receive, organized by category.
         </p>
       </div>
-      <div className="w-full max-w-3xl mx-auto">
-        <Accordion type="single" collapsible className="w-full space-y-4">
-          {faqs.map((faq, index) => (
-            <AccordionItem
-              key={index}
-              value={`item-${index}`}
-              className="rounded-lg border bg-card shadow-sm"
-            >
-              <AccordionTrigger className="p-6 text-left font-headline text-lg font-semibold hover:no-underline">
-                {faq.question}
-              </AccordionTrigger>
-              <AccordionContent className="px-6 pb-6">
-                <p className="text-muted-foreground">{faq.answer}</p>
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+      
+      <div className="w-full max-w-4xl mx-auto">
+        <Tabs defaultValue="general" className="w-full">
+          <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 mb-8">
+            <TabsTrigger value="general">General</TabsTrigger>
+            <TabsTrigger value="beginners">For Beginners</TabsTrigger>
+            <TabsTrigger value="courses">Courses</TabsTrigger>
+            <TabsTrigger value="equipment">Equipment</TabsTrigger>
+          </TabsList>
+
+          <TabsContent value="general">
+            <Accordion type="single" collapsible className="w-full space-y-4">
+              {faqData.general.map((faq, index) => (
+                <AccordionItem
+                  key={`general-${index}`}
+                  value={`item-${index}`}
+                  className="rounded-lg border bg-card shadow-sm"
+                >
+                  <AccordionTrigger className="p-6 text-left font-headline text-lg font-semibold hover:no-underline">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="px-6 pb-6">
+                    <p className="text-muted-foreground">{faq.answer}</p>
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </TabsContent>
+
+          <TabsContent value="beginners">
+            <Accordion type="single" collapsible className="w-full space-y-4">
+              {faqData.beginners.map((faq, index) => (
+                <AccordionItem
+                  key={`beginners-${index}`}
+                  value={`item-${index}`}
+                  className="rounded-lg border bg-card shadow-sm"
+                >
+                  <AccordionTrigger className="p-6 text-left font-headline text-lg font-semibold hover:no-underline">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="px-6 pb-6">
+                    <p className="text-muted-foreground">{faq.answer}</p>
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </TabsContent>
+
+          <TabsContent value="courses">
+            <Accordion type="single" collapsible className="w-full space-y-4">
+              {faqData.courses.map((faq, index) => (
+                <AccordionItem
+                  key={`courses-${index}`}
+                  value={`item-${index}`}
+                  className="rounded-lg border bg-card shadow-sm"
+                >
+                  <AccordionTrigger className="p-6 text-left font-headline text-lg font-semibold hover:no-underline">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="px-6 pb-6">
+                    <p className="text-muted-foreground">{faq.answer}</p>
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </TabsContent>
+          
+          <TabsContent value="equipment">
+            <Accordion type="single" collapsible className="w-full space-y-4">
+              {faqData.equipment.map((faq, index) => (
+                <AccordionItem
+                  key={`equipment-${index}`}
+                  value={`item-${index}`}
+                  className="rounded-lg border bg-card shadow-sm"
+                >
+                  <AccordionTrigger className="p-6 text-left font-headline text-lg font-semibold hover:no-underline">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="px-6 pb-6">
+                    <p className="text-muted-foreground">{faq.answer}</p>
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </TabsContent>
+        </Tabs>
       </div>
     </main>
   );
