@@ -6,6 +6,7 @@ import { cn } from '@/lib/utils';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import ScrollToTop from '@/components/ScrollToTop';
+import CursorIcon from '@/components/CursorIcon';
 
 const poppins = Poppins({ 
   subsets: ['latin'],
@@ -43,6 +44,7 @@ export default function RootLayout({
         </div>
         <Toaster />
         <ScrollToTop />
+        <CursorIcon />
       </body>
     </html>
   );
