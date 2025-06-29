@@ -6,7 +6,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
 import FeatureCard from "@/components/FeatureCard";
-import { Bullseye, Eye, Heart } from "lucide-react";
+import { Target, Eye, Heart } from "lucide-react";
 
 export default function AboutPage() {
   const teamMembers = [
@@ -139,7 +139,7 @@ export default function AboutPage() {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <FeatureCard 
-                icon={<Bullseye />}
+                icon={<Target />}
                 title="Our Mission"
                 description="To provide safe, professional, and unforgettable paragliding experiences while promoting the sport in India and around the world. We aim to inspire a love for flight and adventure in everyone who visits us."
                 index={0}
