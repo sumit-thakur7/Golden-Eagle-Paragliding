@@ -56,10 +56,10 @@ export default function Header() {
           {/* Logo */}
           <Link href="/">
             <div className="flex items-center cursor-pointer">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="text-secondary w-8 h-8 mr-2">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="text-primary w-8 h-8 mr-2">
                 <path d="M12.6.75h2.454l-1.812 3H15a.75.75 0 0 1 0 1.5h-3.38L12.6.75Zm-.5 3.75V2.25h-2.22l-1.841 5.06 1.973 1.46L11.6 4.5Zm2.385 3.354-2.291-1.7 2.79-5.242 3.034 1.394a.75.75 0 0 1 .386.656.75.75 0 0 1-.386.657l-3.533 1.9a2.25 2.25 0 0 0-.945.935l-.069.136a.75.75 0 0 1-.986.364ZM7.832 4.065a.75.75 0 0 1 .203.034L7.927 4.07l1.173.423-.681 1.87a.75.75 0 0 1-.694.504H5.91l1.922-2.803Zm2.729 5.605L9.47 8.834a.75.75 0 0 1-.231-1.033L9.593 7.2l.395-1.085 1.32.098a1.5 1.5 0 0 1 1.224.877l.536 1.293a1.5 1.5 0 0 1 0 1.18l-.996 2.244a.75.75 0 0 1-1.151.337.75.75 0 0 1-.195-.197l-.236-.416a1.5 1.5 0 0 1 .67-2.132h.001l-.003-.002Zm-1.932 9.778L9.463 17.2a.75.75 0 0 1-.175-.851l.143-.352a.75.75 0 0 1 .136-.222l2.116-2.235a.75.75 0 0 1 .233-.167l1.13-.445a.75.75 0 0 1 .549-.019l3.18 1.196a.75.75 0 0 1-.546 1.397l-2.99-1.123-1.801 1.896.338.836a.75.75 0 0 1-.546 1.016l-2.361.607a.75.75 0 0 1-.28.003Zm1.931-10.12.4.7a.75.75 0 0 1-.654 1.113h-1.217l2.293 3.217a.75.75 0 0 1 .143.54l-.313 1.432a.75.75 0 0 1-.638.588l-1.95.307a.75.75 0 0 1-.525-.124.75.75 0 0 1-.281-.462l-.21-.963-1.823 1.924a.75.75 0 0 1-1.147-.1l-1.075-1.5a.75.75 0 0 1 .028-.965L7.33 9.625l3.229.03Zm2.16-7.917L12.82.817l3.182 2.34a.75.75 0 0 1-.314 1.335l-3.988.837a.75.75 0 0 1-.213.022Z" />
               </svg>
-              <span className="font-headline font-bold text-2xl text-foreground">GEP <span className="text-secondary">Paragliding</span></span>
+              <span className="font-headline font-bold text-2xl text-foreground">GEP <span className="text-primary">Paragliding</span></span>
             </div>
           </Link>
 
@@ -68,11 +68,11 @@ export default function Header() {
             {navLinks.map((link) => (
               <Link key={link.href} href={link.href} className={cn(
                 "nav-link font-medium transition-colors relative",
-                pathname === link.href ? "text-secondary" : "text-foreground hover:text-secondary"
+                pathname === link.href ? "text-primary" : "text-foreground hover:text-primary"
               )}>
                 {link.label}
                 <span className={cn(
-                  "absolute bottom-[-4px] left-0 w-0 h-0.5 bg-secondary transition-all duration-300",
+                  "absolute bottom-[-4px] left-0 w-0 h-0.5 bg-primary transition-all duration-300",
                   pathname === link.href && "w-full"
                 )}></span>
               </Link>
@@ -81,7 +81,7 @@ export default function Header() {
 
           {/* Book Now Button (Desktop) */}
           <Link href="/booking" className="hidden md:block">
-            <Button className="px-6 py-2 bg-secondary text-secondary-foreground font-sans font-medium rounded-full hover:bg-secondary/90 transition">
+            <Button className="px-6 py-2 bg-primary text-primary-foreground font-sans font-medium rounded-full hover:bg-primary/90 transition">
               Book Now
             </Button>
           </Link>
@@ -103,7 +103,7 @@ export default function Header() {
                     className={cn(
                       "py-2 px-4 font-medium rounded-md transition-colors",
                       pathname === link.href
-                        ? "bg-secondary/10 text-secondary"
+                        ? "bg-primary/10 text-primary"
                         : "hover:bg-muted"
                     )}
                     onClick={() => setIsOpen(false)}
@@ -115,7 +115,7 @@ export default function Header() {
                   href="/booking" 
                   onClick={() => setIsOpen(false)}
                 >
-                  <Button className="w-full mt-4 px-6 py-2 bg-secondary text-secondary-foreground font-sans font-medium rounded-full hover:bg-secondary/90 transition text-center block">
+                  <Button className="w-full mt-4 px-6 py-2 bg-primary text-primary-foreground font-sans font-medium rounded-full hover:bg-primary/90 transition text-center block">
                     Book Now
                   </Button>
                 </Link>
