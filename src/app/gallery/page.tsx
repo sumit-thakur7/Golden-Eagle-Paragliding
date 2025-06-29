@@ -34,7 +34,7 @@ export default function GalleryPage() {
       {/* Header Banner */}
       <section className="pt-32 pb-16 bg-gradient-cta bg-cover bg-center">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="font-headline font-bold text-4xl md:text-5xl text-white mb-4">Gallery</h1>
+          <h1 className="font-headline font-bold text-4xl sm:text-5xl text-white mb-4">Gallery</h1>
           <p className="text-white/90 max-w-3xl mx-auto">
             Explore stunning moments captured during our paragliding adventures. 
             Each image tells a story of freedom, adventure, and the beauty of flight.
@@ -44,10 +44,10 @@ export default function GalleryPage() {
 
       {/* Gallery Grid */}
       <AnimatedSection>
-        <section className="py-20">
+        <section className="py-12 md:py-20">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="font-headline font-bold text-4xl text-foreground mb-4">
+            <div className="text-center mb-12 md:mb-16">
+              <h2 className="font-headline font-bold text-3xl md:text-4xl text-foreground mb-4">
                 Our <span className="text-primary">Photo Gallery</span>
               </h2>
               <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
@@ -74,10 +74,10 @@ export default function GalleryPage() {
 
       {/* Video Gallery */}
       <AnimatedSection>
-        <section className="py-20 bg-muted">
+        <section className="py-12 md:py-20 bg-muted">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="font-headline font-bold text-4xl text-foreground mb-4">
+            <div className="text-center mb-12 md:mb-16">
+              <h2 className="font-headline font-bold text-3xl md:text-4xl text-foreground mb-4">
                 Paragliding <span className="text-primary">Videos</span>
               </h2>
               <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
@@ -93,7 +93,7 @@ export default function GalleryPage() {
                   <div className="mb-4">
                     <YouTubeEmbed videoId={video.id} title={video.title} />
                   </div>
-                  <h3 className="font-headline font-bold text-xl text-foreground mb-2">{video.title}</h3>
+                  <h3 className="font-headline font-bold text-lg sm:text-xl text-foreground mb-2">{video.title}</h3>
                   <p className="text-muted-foreground">{video.description}</p>
                 </div>
               ))}

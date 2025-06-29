@@ -6,7 +6,7 @@ export default function HeroSection() {
   return (
     <section id="home" className="relative h-[calc(100vh-4rem)] w-full">
       <Image
-        src="https://placehold.co/1920x1080.png"
+        src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
         alt="Paraglider soaring over mountains"
         layout="fill"
         objectFit="cover"

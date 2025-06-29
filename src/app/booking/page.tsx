@@ -115,7 +115,7 @@ export default function BookingPage() {
       {/* Header Banner */}
       <section className="pt-32 pb-16 bg-gradient-cta bg-cover bg-center">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="font-headline font-bold text-4xl md:text-5xl text-white mb-4">Book Your Adventure</h1>
+          <h1 className="font-headline font-bold text-4xl sm:text-5xl text-white mb-4">Book Your Adventure</h1>
           <p className="text-white/90 max-w-3xl mx-auto">
             Ready to experience the thrill of paragliding? Reserve your spot now and prepare for an unforgettable adventure.
           </p>
@@ -124,10 +124,10 @@ export default function BookingPage() {
 
       {/* Booking Form */}
       <AnimatedSection>
-        <section className="py-20">
+        <section className="py-12 md:py-20">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto bg-card rounded-2xl p-8 shadow-2xl">
-              <h2 className="font-headline font-bold text-3xl text-foreground mb-6 text-center">Reserve Your Paragliding Experience</h2>
+            <div className="max-w-4xl mx-auto bg-card rounded-2xl p-6 sm:p-8 shadow-2xl">
+              <h2 className="font-headline font-bold text-2xl sm:text-3xl text-foreground mb-6 text-center">Reserve Your Paragliding Experience</h2>
               <p className="text-muted-foreground mb-8 text-center">
                 Fill out the form below to book your paragliding adventure. We'll contact you shortly to confirm your reservation and provide additional details.
               </p>
@@ -281,7 +281,7 @@ export default function BookingPage() {
                     <Button 
                       type="submit" 
                       disabled={form.formState.isSubmitting}
-                      className="w-full px-8 py-4 bg-primary text-primary-foreground font-sans font-medium rounded-full hover:bg-primary/90 transition text-base md:text-lg"
+                      className="w-full px-8 py-4 bg-primary text-primary-foreground font-sans font-medium rounded-full hover:bg-primary/90 transition text-base"
                     >
                       {form.formState.isSubmitting ? "Processing..." : "Book Your Adventure Now"}
                     </Button>
@@ -295,10 +295,10 @@ export default function BookingPage() {
 
       {/* Why Book With Us */}
       <AnimatedSection>
-        <section className="py-20 bg-muted">
+        <section className="py-12 md:py-20 bg-muted">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="font-headline font-bold text-4xl text-foreground mb-4">
+            <div className="text-center mb-12 md:mb-16">
+              <h2 className="font-headline font-bold text-3xl md:text-4xl text-foreground mb-4">
                 Why Book With <span className="text-primary">GEP Paragliding</span>
               </h2>
               <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
@@ -313,7 +313,7 @@ export default function BookingPage() {
                     <div className="text-primary mb-4">
                         {item.icon}
                     </div>
-                    <h3 className="font-headline font-bold text-xl text-foreground mb-3">{item.title}</h3>
+                    <h3 className="font-headline font-bold text-lg sm:text-xl text-foreground mb-3">{item.title}</h3>
                     <p className="text-muted-foreground flex-grow">
                         {item.description}
                     </p>
@@ -326,14 +326,14 @@ export default function BookingPage() {
 
       {/* Booking Policy */}
       <AnimatedSection>
-        <section className="py-20">
+        <section className="py-12 md:py-20">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto bg-card rounded-2xl p-8 shadow-xl">
-              <h2 className="font-headline font-bold text-3xl text-foreground mb-6 text-center">Booking Policy</h2>
+            <div className="max-w-4xl mx-auto bg-card rounded-2xl p-6 sm:p-8 shadow-xl">
+              <h2 className="font-headline font-bold text-2xl sm:text-3xl text-foreground mb-6 text-center">Booking Policy</h2>
               
               <div className="space-y-6 text-muted-foreground">
                 <div>
-                  <h3 className="font-headline font-semibold text-xl text-foreground mb-2">Payment</h3>
+                  <h3 className="font-headline font-semibold text-lg sm:text-xl text-foreground mb-2">Payment</h3>
                   <p>
                     A 30% deposit is required to confirm your booking. The remaining balance is due on the day of your flight.
                     We accept cash, credit cards, and online transfers.
@@ -341,7 +341,7 @@ export default function BookingPage() {
                 </div>
                 
                 <div>
-                  <h3 className="font-headline font-semibold text-xl text-foreground mb-2">Cancellation</h3>
+                  <h3 className="font-headline font-semibold text-lg sm:text-xl text-foreground mb-2">Cancellation</h3>
                   <p>
                     Cancellations made more than 72 hours before the scheduled flight receive a full refund.
                     Cancellations within 48-72 hours receive a 50% refund. Cancellations less than 48 hours before
@@ -350,7 +350,7 @@ export default function BookingPage() {
                 </div>
                 
                 <div>
-                  <h3 className="font-headline font-semibold text-xl text-foreground mb-2">Weather Conditions</h3>
+                  <h3 className="font-headline font-semibold text-lg sm:text-xl text-foreground mb-2">Weather Conditions</h3>
                   <p>
                     In case of unsuitable weather conditions, we'll offer to reschedule your flight or provide a full refund.
                     Safety is our priority, and our pilots make the final decision regarding weather suitability.
@@ -358,7 +358,7 @@ export default function BookingPage() {
                 </div>
                 
                 <div>
-                  <h3 className="font-headline font-semibold text-xl text-foreground mb-2">Health Requirements</h3>
+                  <h3 className="font-headline font-semibold text-lg sm:text-xl text-foreground mb-2">Health Requirements</h3>
                   <p>
                     Participants should be in good health and not suffer from heart conditions, back problems, or 
                     serious medical issues. Please inform us of any health concerns when booking. Pregnant women 

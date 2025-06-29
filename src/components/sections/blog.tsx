@@ -8,17 +8,17 @@ const blogPosts = [
   {
     title: 'Top 5 Safety Tips for First-Time Flyers',
     excerpt: 'Paragliding is an exhilarating sport, but safety always comes first. Here are our top tips...',
-    image: { src: 'https://placehold.co/600x400.png', alt: 'Safety equipment check', hint: 'safety equipment' },
+    image: { src: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80', alt: 'Safety equipment check', hint: 'safety equipment' },
   },
   {
     title: 'The Science of Thermals: How Paragliders Stay Aloft',
     excerpt: 'Ever wondered how paragliders can stay in the air for hours? The secret lies in rising columns of warm air...',
-    image: { src: 'https://placehold.co/600x400.png', alt: 'Paraglider circling in the sky', hint: 'paraglider sky' },
+    image: { src: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80', alt: 'Paraglider circling in the sky', hint: 'paraglider sky' },
   },
   {
     title: 'A Guide to Paragliding in the Himalayas',
     excerpt: 'The Himalayas offer some of the most spectacular scenery for paragliding. Here’s what you need to know...',
-    image: { src: 'https://placehold.co/600x400.png', alt: 'Himalayan mountain range', hint: 'himalayan mountains' },
+    image: { src: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80', alt: 'Himalayan mountain range', hint: 'himalayan mountains' },
   },
 ];
 

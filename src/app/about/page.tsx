@@ -44,7 +44,7 @@ export default function AboutPage() {
       {/* Header Banner */}
       <section className="pt-32 pb-16 bg-gradient-cta bg-cover bg-center">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="font-headline font-bold text-4xl md:text-5xl text-white mb-4">About Us</h1>
+          <h1 className="font-headline font-bold text-4xl sm:text-5xl text-white mb-4">About Us</h1>
           <p className="text-white/90 max-w-3xl mx-auto">
             Learn about our journey, mission, and passion for bringing the experience of paragliding to adventure enthusiasts around the world.
           </p>
@@ -53,9 +53,9 @@ export default function AboutPage() {
 
       {/* Our Story */}
       <AnimatedSection>
-        <section className="py-20">
+        <section className="py-12 md:py-20">
           <div className="container mx-auto px-4">
-            <div className="flex flex-col md:flex-row items-center gap-12">
+            <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
               <div className="md:w-1/2">
                 <Image 
                   src="https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
@@ -67,7 +67,7 @@ export default function AboutPage() {
                 />
               </div>
               <div className="md:w-1/2">
-                <h2 className="font-headline font-bold text-4xl text-foreground mb-6">Our Story</h2>
+                <h2 className="font-headline font-bold text-3xl md:text-4xl text-foreground mb-6">Our Story</h2>
                 <p className="text-muted-foreground mb-4">
                   Founded in 2005, GEP Paragliding began with a simple mission: to share the incredible 
                   experience of paragliding with the world. What started as a small operation with just 
@@ -93,24 +93,24 @@ export default function AboutPage() {
 
       {/* Statistics */}
       <AnimatedSection>
-        <section className="py-16 bg-muted">
+        <section className="py-12 md:py-16 bg-muted">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-              <div className="bg-card p-8 rounded-xl shadow-lg hover:shadow-xl transition">
-                <p className="font-headline font-bold text-4xl md:text-5xl text-primary mb-2">15+</p>
-                <p className="text-muted-foreground font-medium">Years of Experience</p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 text-center">
+              <div className="bg-card p-4 sm:p-8 rounded-xl shadow-lg hover:shadow-xl transition">
+                <p className="font-headline font-bold text-3xl sm:text-4xl md:text-5xl text-primary mb-2">15+</p>
+                <p className="text-muted-foreground font-medium text-sm sm:text-base">Years of Experience</p>
               </div>
-              <div className="bg-card p-8 rounded-xl shadow-lg hover:shadow-xl transition">
-                <p className="font-headline font-bold text-4xl md:text-5xl text-primary mb-2">50+</p>
-                <p className="text-muted-foreground font-medium">Certified Instructors</p>
+              <div className="bg-card p-4 sm:p-8 rounded-xl shadow-lg hover:shadow-xl transition">
+                <p className="font-headline font-bold text-3xl sm:text-4xl md:text-5xl text-primary mb-2">50+</p>
+                <p className="text-muted-foreground font-medium text-sm sm:text-base">Certified Instructors</p>
               </div>
-              <div className="bg-card p-8 rounded-xl shadow-lg hover:shadow-xl transition">
-                <p className="font-headline font-bold text-4xl md:text-5xl text-primary mb-2">5000+</p>
-                <p className="text-muted-foreground font-medium">Students Trained</p>
+              <div className="bg-card p-4 sm:p-8 rounded-xl shadow-lg hover:shadow-xl transition">
+                <p className="font-headline font-bold text-3xl sm:text-4xl md:text-5xl text-primary mb-2">5000+</p>
+                <p className="text-muted-foreground font-medium text-sm sm:text-base">Students Trained</p>
               </div>
-              <div className="bg-card p-8 rounded-xl shadow-lg hover:shadow-xl transition">
-                <p className="font-headline font-bold text-4xl md:text-5xl text-primary mb-2">10+</p>
-                <p className="text-muted-foreground font-medium">Flying Locations</p>
+              <div className="bg-card p-4 sm:p-8 rounded-xl shadow-lg hover:shadow-xl transition">
+                <p className="font-headline font-bold text-3xl sm:text-4xl md:text-5xl text-primary mb-2">10+</p>
+                <p className="text-muted-foreground font-medium text-sm sm:text-base">Flying Locations</p>
               </div>
             </div>
           </div>
@@ -119,10 +119,10 @@ export default function AboutPage() {
 
       {/* Mission, Vision, Values */}
       <AnimatedSection>
-        <section className="py-20">
+        <section className="py-12 md:py-20">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="font-headline font-bold text-4xl text-foreground mb-4">
+            <div className="text-center mb-12 md:mb-16">
+              <h2 className="font-headline font-bold text-3xl md:text-4xl text-foreground mb-4">
                 Our Mission & Vision
               </h2>
               <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
@@ -157,10 +157,10 @@ export default function AboutPage() {
 
       {/* Our Team */}
       <AnimatedSection>
-        <section className="py-20 bg-muted">
+        <section className="py-12 md:py-20 bg-muted">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="font-headline font-bold text-4xl text-foreground mb-4">
+            <div className="text-center mb-12 md:mb-16">
+              <h2 className="font-headline font-bold text-3xl md:text-4xl text-foreground mb-4">
                 Meet Our Team
               </h2>
               <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
@@ -183,7 +183,7 @@ export default function AboutPage() {
                     />
                   </div>
                   <div className="p-6 text-center">
-                    <h3 className="font-headline font-bold text-xl text-foreground mb-1">{member.name}</h3>
+                    <h3 className="font-headline font-bold text-lg sm:text-xl text-foreground mb-1">{member.name}</h3>
                     <p className="text-primary font-medium mb-3">{member.role}</p>
                     <p className="text-muted-foreground text-sm mb-4">
                       {member.description}
@@ -200,19 +200,19 @@ export default function AboutPage() {
       <AnimatedSection>
         <section className="py-20 bg-gradient-cta bg-cover bg-center bg-fixed text-white">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="font-headline font-bold text-4xl mb-6">Join Our Paragliding Community</h2>
+            <h2 className="font-headline font-bold text-3xl md:text-4xl mb-6">Join Our Paragliding Community</h2>
             <p className="max-w-2xl mx-auto mb-10 text-white/90">
               Whether you're looking for your first flight experience or want to become a certified pilot,
               we're here to guide you on your paragliding journey.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link href="/booking">
-                <Button className="px-8 py-6 bg-accent text-accent-foreground font-sans font-medium rounded-full hover:bg-accent/90 transition">
+                <Button className="px-6 py-4 sm:px-8 sm:py-6 bg-accent text-accent-foreground font-sans font-medium rounded-full hover:bg-accent/90 transition">
                   Book Your Adventure
                 </Button>
               </Link>
               <Link href="/contact">
-                <Button variant="outline" className="px-8 py-6 bg-white/10 backdrop-blur-sm border border-white/30 text-white font-sans font-medium rounded-full hover:bg-white/20 transition">
+                <Button variant="outline" className="px-6 py-4 sm:px-8 sm:py-6 bg-white/10 backdrop-blur-sm border border-white/30 text-white font-sans font-medium rounded-full hover:bg-white/20 transition">
                   Contact Us
                 </Button>
               </Link>

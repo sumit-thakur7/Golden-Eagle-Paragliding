@@ -3,12 +3,12 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Image as ImageIcon } from 'lucide-react';
 
 const galleryImages = [
-  { src: "https://placehold.co/600x400.png", alt: "Paraglider taking off", hint: "paraglider takeoff" },
-  { src: "https://placehold.co/600x400.png", alt: "Aerial view of a valley", hint: "aerial valley" },
-  { src: "https://placehold.co/600x400.png", alt: "Close-up of a paraglider's wing", hint: "paraglider wing" },
-  { src: "https://placehold.co/600x400.png", alt: "Sunset flight", hint: "paragliding sunset" },
-  { src: "https://placehold.co/600x400.png", alt: "Group of paragliders", hint: "paragliding group" },
-  { src: "https://placehold.co/600x400.png", alt: "Flyer with a scenic background", hint: "scenic flight" },
+  { src: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80", alt: "Paraglider taking off", hint: "paraglider takeoff" },
+  { src: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80", alt: "Aerial view of a valley", hint: "aerial valley" },
+  { src: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80", alt: "Close-up of a paraglider's wing", hint: "paraglider wing" },
+  { src: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80", alt: "Sunset flight", hint: "paragliding sunset" },
+  { src: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80", alt: "Group of paragliders", hint: "paragliding group" },
+  { src: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80", alt: "Flyer with a scenic background", hint: "scenic flight" },
 ];
 
 export default function GallerySection() {

@@ -27,7 +27,7 @@ export default function TestimonialsPage() {
       {/* Header Banner */}
       <section className="pt-32 pb-16 bg-gradient-cta bg-cover bg-center">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="font-headline font-bold text-4xl md:text-5xl text-white mb-4">Testimonials</h1>
+          <h1 className="font-headline font-bold text-4xl sm:text-5xl text-white mb-4">Testimonials</h1>
           <p className="text-white/90 max-w-3xl mx-auto">
             Don't just take our word for it. Hear from the adventurers who have 
             experienced the thrill of paragliding with us.
@@ -37,10 +37,10 @@ export default function TestimonialsPage() {
 
       {/* Featured Testimonials */}
       <AnimatedSection>
-        <section className="py-20">
+        <section className="py-12 md:py-20">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="font-headline font-bold text-4xl text-foreground mb-4">
+            <div className="text-center mb-12 md:mb-16">
+              <h2 className="font-headline font-bold text-3xl md:text-4xl text-foreground mb-4">
                 What Our <span className="text-primary">Flyers Say</span>
               </h2>
               <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
@@ -53,7 +53,7 @@ export default function TestimonialsPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonialData.featured.map((testimonial, index) => (
                 <div key={index} className="bg-card p-8 rounded-xl shadow-lg relative">
-                  <div className="text-primary text-8xl absolute -top-4 left-4 opacity-10 font-serif">"</div>
+                  <div className="text-primary text-6xl sm:text-8xl absolute -top-4 left-4 opacity-10 font-serif">"</div>
                   <div className="relative z-10">
                     <div className="flex items-center mb-4">
                       <div className="flex text-primary">
@@ -86,10 +86,10 @@ export default function TestimonialsPage() {
 
       {/* Video Testimonials */}
       <AnimatedSection>
-        <section className="py-20 bg-muted">
+        <section className="py-12 md:py-20 bg-muted">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="font-headline font-bold text-4xl text-foreground mb-4">
+            <div className="text-center mb-12 md:mb-16">
+              <h2 className="font-headline font-bold text-3xl md:text-4xl text-foreground mb-4">
                 Video <span className="text-primary">Testimonials</span>
               </h2>
               <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
@@ -113,7 +113,7 @@ export default function TestimonialsPage() {
                   ></iframe>
                 </div>
                 <div className="p-6">
-                  <h3 className="font-headline font-bold text-xl text-foreground mb-2">Rahul's First Flight Experience</h3>
+                  <h3 className="font-headline font-bold text-lg sm:text-xl text-foreground mb-2">Rahul's First Flight Experience</h3>
                   <p className="text-muted-foreground mb-4">
                     "I was nervous at first, but the instructors made me feel so comfortable. The views were absolutely breathtaking!"
                   </p>
@@ -139,7 +139,7 @@ export default function TestimonialsPage() {
                   ></iframe>
                 </div>
                 <div className="p-6">
-                  <h3 className="font-headline font-bold text-xl text-foreground mb-2">Priya's P1 Training Journey</h3>
+                  <h3 className="font-headline font-bold text-lg sm:text-xl text-foreground mb-2">Priya's P1 Training Journey</h3>
                   <p className="text-muted-foreground mb-4">
                     "The comprehensive training helped me become confident in my skills. By the end of the course, I was flying solo!"
                   </p>
@@ -158,10 +158,10 @@ export default function TestimonialsPage() {
 
       {/* All Testimonials */}
       <AnimatedSection>
-        <section className="py-20">
+        <section className="py-12 md:py-20">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="font-headline font-bold text-4xl text-foreground mb-4">
+            <div className="text-center mb-12 md:mb-16">
+              <h2 className="font-headline font-bold text-3xl md:text-4xl text-foreground mb-4">
                 More <span className="text-primary">Reviews</span>
               </h2>
               <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
@@ -205,11 +205,11 @@ export default function TestimonialsPage() {
       <AnimatedSection>
         <section className="py-20 bg-gradient-cta bg-cover bg-center bg-fixed text-white">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="font-headline font-bold text-4xl mb-12">Our Customer Satisfaction</h2>
+            <h2 className="font-headline font-bold text-3xl md:text-4xl mb-12">Our Customer Satisfaction</h2>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl hover:bg-white/20 transition">
-                <div className="font-headline font-bold text-4xl md:text-5xl mb-2">4.9/5</div>
+                <div className="font-headline font-bold text-3xl sm:text-4xl md:text-5xl mb-2">4.9/5</div>
                 <p className="mb-3">Overall Rating</p>
                 <div className="flex justify-center text-primary">
                   {renderStars(4.9)}
@@ -217,17 +217,17 @@ export default function TestimonialsPage() {
               </div>
               
               <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl hover:bg-white/20 transition">
-                <div className="font-headline font-bold text-4xl md:text-5xl mb-2">98%</div>
+                <div className="font-headline font-bold text-3xl sm:text-4xl md:text-5xl mb-2">98%</div>
                 <p>Would Recommend</p>
               </div>
               
               <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl hover:bg-white/20 transition">
-                <div className="font-headline font-bold text-4xl md:text-5xl mb-2">5000+</div>
+                <div className="font-headline font-bold text-3xl sm:text-4xl md:text-5xl mb-2">5000+</div>
                 <p>Happy Customers</p>
               </div>
               
               <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl hover:bg-white/20 transition">
-                <div className="font-headline font-bold text-4xl md:text-5xl mb-2">85%</div>
+                <div className="font-headline font-bold text-3xl sm:text-4xl md:text-5xl mb-2">85%</div>
                 <p>Return Customers</p>
               </div>
             </div>

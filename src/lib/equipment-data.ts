@@ -3,7 +3,7 @@ export const equipmentData = {
     {
       title: "Paragliding Wings",
       description: "We use top brands like Ozone, Advance, and Nova with EN/LTF certification for all skill levels.",
-      image: "https://images.unsplash.com/photo-1473442240208-9f0f5572acb5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      image: "https://images.unsplash.com/photo-1471506480208-91b3a4cc78be?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
       features: [
         "Beginner-friendly options",
         "Intermediate wings",
@@ -33,7 +33,7 @@ export const equipmentData = {
     {
       title: "Flight Instruments",
       description: "Modern variometers, GPS, and radios for navigation and communication during flights.",
-      image: "https://images.unsplash.com/photo-1603178295351-3be4c3ca9623?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      image: "https://images.unsplash.com/photo-1606765962248-7ff407b51667?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
       features: [
         "Flymaster GPS & varios",
         "Two-way radios",
@@ -55,15 +55,15 @@ export const equipmentData = {
         alt: "Equipment Shop"
       },
       {
-        url: "https://images.unsplash.com/photo-1607962792938-67cad9d4c8af?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+        url: "https://images.unsplash.com/photo-1552642986-ccb41e7059e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
         alt: "Equipment Testing"
       },
       {
-        url: "https://images.unsplash.com/photo-1501884428012-e7488dc00096?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+        url: "https://images.unsplash.com/photo-1552642986-ccb41e7059e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
         alt: "Equipment Maintenance"
       },
       {
-        url: "https://images.unsplash.com/photo-1558468601-39479a3e6352?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+        url: "https://images.unsplash.com/photo-1552642986-ccb41e7059e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
         alt: "Equipment Adjustment"
       }
     ]
@@ -77,22 +77,22 @@ export const equipmentData = {
     },
     {
       name: "Advance",
-      logo: "https://www.flyinsite.de/media/image/e0/4e/96/advance.jpg",
+      logo: "https://www.flybubble.com/media/catalog/category/nova_logo.jpg",
       specialty: "Premium Harnesses"
     },
     {
       name: "Supair",
-      logo: "https://www.paragliding-online.com/media/logo-supair.svg",
+      logo: "https://www.flybubble.com/media/catalog/category/nova_logo.jpg",
       specialty: "Comprehensive Equipment"
     },
     {
       name: "Flymaster",
-      logo: "https://www.flymasteronline.com/wp-content/uploads/2020/01/Flymaster_Logo_Black-1.png",
+      logo: "https://www.flybubble.com/media/catalog/category/nova_logo.jpg",
       specialty: "Flight Instruments"
     },
     {
       name: "Woody Valley",
-      logo: "https://www.woodyvalley.eu/wp-content/uploads/2021/07/woodyvalley_logo_header.svg",
+      logo: "https://www.flybubble.com/media/catalog/category/nova_logo.jpg",
       specialty: "Innovative Harnesses"
     },
     {
@@ -102,12 +102,12 @@ export const equipmentData = {
     },
     {
       name: "Gin Gliders",
-      logo: "https://www.gingliders.com/wp-content/themes/gin-gliders/dist/images/logo.svg",
+      logo: "https://www.flybubble.com/media/catalog/category/nova_logo.jpg",
       specialty: "High-Performance Wings"
     },
     {
       name: "Skywalk",
-      logo: "https://skywalk.info/wp-content/uploads/2022/03/skywalk-Logo-Paragliding-2021-.svg",
+      logo: "https://www.flybubble.com/media/catalog/category/nova_logo.jpg",
       specialty: "Versatile Equipment"
     }
   ]

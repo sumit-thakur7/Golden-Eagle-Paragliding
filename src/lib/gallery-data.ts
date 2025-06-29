@@ -1,10 +1,10 @@
 export const galleryData = [
   {
-    url: "https://images.unsplash.com/photo-1485467701900-3a736f3f5c39?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+    url: "https://images.unsplash.com/photo-1503104834685-7205e8607eb9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
     alt: "Paraglider over mountains with sun rays"
   },
   {
-    url: "https://images.unsplash.com/photo-1436981427624-2ecd3a8a795a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+    url: "https://images.unsplash.com/photo-1472145246862-b24cf25c4a36?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
     alt: "Paraglider silhouette during sunset"
   },
   {
@@ -12,19 +12,19 @@ export const galleryData = [
     alt: "Paraglider launching from mountain"
   },
   {
-    url: "https://images.unsplash.com/photo-1600108515428-489c93e6e607?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+    url: "https://images.unsplash.com/photo-1472145246862-b24cf25c4a36?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
     alt: "Mountain landscape view from paraglider perspective"
   },
   {
-    url: "https://images.unsplash.com/photo-1612728463082-ccb6a0108b57?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+    url: "https://images.unsplash.com/photo-1472145246862-b24cf25c4a36?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
     alt: "Paragliding equipment and gear setup"
   },
   {
-    url: "https://images.unsplash.com/photo-1607962792938-67cad9d4c8af?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+    url: "https://images.unsplash.com/photo-1472145246862-b24cf25c4a36?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
     alt: "Paragliding training session on hillside"
   },
   {
-    url: "https://images.unsplash.com/photo-1582650406008-18a08f9dd08e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+    url: "https://images.unsplash.com/photo-1472145246862-b24cf25c4a36?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
     alt: "Multiple paragliders soaring together in blue sky"
   },
   {
@@ -60,7 +60,7 @@ export const galleryData = [
     alt: "Paragliders preparing for takeoff on mountain edge"
   },
   {
-    url: "https://images.unsplash.com/photo-1465189684280-6a8fa9b19a00?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+    url: "https://images.unsplash.com/photo-1472145246862-b24cf25c4a36?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
     alt: "Green valley and forest seen from above"
   }
 ];

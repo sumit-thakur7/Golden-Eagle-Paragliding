@@ -13,7 +13,7 @@ export default function EquipmentPage() {
       {/* Header Banner */}
       <section className="pt-32 pb-16 bg-gradient-cta bg-cover bg-center">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="font-headline font-bold text-4xl md:text-5xl text-white mb-4">Equipment</h1>
+          <h1 className="font-headline font-bold text-4xl sm:text-5xl text-white mb-4">Equipment</h1>
           <p className="text-white/90 max-w-3xl mx-auto">
             We use only the highest quality, certified paragliding equipment to ensure 
             your safety and enjoyable flying experience.
@@ -23,10 +23,10 @@ export default function EquipmentPage() {
 
       {/* Main Equipment */}
       <AnimatedSection>
-        <section className="py-20">
+        <section className="py-12 md:py-20">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="font-headline font-bold text-4xl text-foreground mb-4">
+            <div className="text-center mb-12 md:mb-16">
+              <h2 className="font-headline font-bold text-3xl md:text-4xl text-foreground mb-4">
                 Our <span className="text-primary">Equipment</span>
               </h2>
               <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
@@ -49,7 +49,7 @@ export default function EquipmentPage() {
                       className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                     />
                   </div>
-                  <h3 className="font-headline font-bold text-xl text-foreground mb-2">{item.title}</h3>
+                  <h3 className="font-headline font-bold text-lg sm:text-xl text-foreground mb-2">{item.title}</h3>
                   <p className="text-muted-foreground mb-4 flex-grow">{item.description}</p>
                   <ul className="text-sm text-muted-foreground space-y-1">
                     {item.features.map((feature, idx) => (
@@ -68,12 +68,12 @@ export default function EquipmentPage() {
 
       {/* Equipment Rental & Sales */}
       <AnimatedSection>
-        <section className="py-20 bg-muted">
+        <section className="py-12 md:py-20 bg-muted">
           <div className="container mx-auto px-4">
-            <div className="bg-card rounded-2xl p-8 md:p-12 shadow-xl">
+            <div className="bg-card rounded-2xl p-6 sm:p-8 md:p-12 shadow-xl">
               <div className="flex flex-col md:flex-row items-center">
                 <div className="md:w-1/2 mb-8 md:mb-0 md:pr-10">
-                  <h2 className="font-headline font-bold text-3xl text-foreground mb-6">Equipment Rental & Sales</h2>
+                  <h2 className="font-headline font-bold text-2xl md:text-3xl text-foreground mb-6">Equipment Rental & Sales</h2>
                   <p className="text-muted-foreground mb-6">
                     We offer equipment rental for our students and visiting pilots. We also have a pro shop 
                     where you can purchase your own paragliding gear from leading brands like Ozone, 
@@ -95,7 +95,7 @@ export default function EquipmentPage() {
                     </Button>
                   </Link>
                 </div>
-                <div className="md:w-1/2 grid grid-cols-2 gap-4">
+                <div className="md:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {equipmentData.rental.images.map((image, index) => (
                     <div key={index} className="overflow-hidden rounded-lg shadow-md">
                       <Image 
@@ -104,7 +104,7 @@ export default function EquipmentPage() {
                         width={400}
                         height={400}
                         data-ai-hint="paragliding equipment"
-                        className="w-full h-48 object-cover transition-transform duration-500 hover:scale-105"
+                        className="w-full h-40 sm:h-48 object-cover transition-transform duration-500 hover:scale-105"
                       />
                     </div>
                   ))}
@@ -117,10 +117,10 @@ export default function EquipmentPage() {
 
       {/* Brands We Trust */}
       <AnimatedSection>
-        <section className="py-20">
+        <section className="py-12 md:py-20">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="font-headline font-bold text-4xl text-foreground mb-4">
+            <div className="text-center mb-12 md:mb-16">
+              <h2 className="font-headline font-bold text-3xl md:text-4xl text-foreground mb-4">
                 Brands We <span className="text-primary">Trust</span>
               </h2>
               <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
@@ -130,7 +130,7 @@ export default function EquipmentPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 items-center">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-8 items-center">
               {equipmentData.brands.map((brand, index) => (
                 <div key={index} className="flex justify-center items-center p-4 bg-card rounded-lg shadow-sm hover:shadow-md transition h-24 grayscale hover:grayscale-0 contrast-75 hover:contrast-100">
                   <div className="relative w-full h-16">
@@ -150,12 +150,12 @@ export default function EquipmentPage() {
 
       {/* Equipment Maintenance */}
       <AnimatedSection>
-        <section className="py-20 bg-muted">
+        <section className="py-12 md:py-20 bg-muted">
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row items-center gap-12">
               <div className="md:w-1/2">
                 <Image 
-                  src="https://images.unsplash.com/photo-1501884428012-e7488dc00096?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                  src="https://images.unsplash.com/photo-1471506480208-91b3a4cc78be?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
                   alt="Equipment maintenance" 
                   width={600}
                   height={400}
@@ -164,7 +164,7 @@ export default function EquipmentPage() {
                 />
               </div>
               <div className="md:w-1/2">
-                <h2 className="font-headline font-bold text-4xl text-foreground mb-6">Equipment Maintenance</h2>
+                <h2 className="font-headline font-bold text-3xl md:text-4xl text-foreground mb-6">Equipment Maintenance</h2>
                 <p className="text-muted-foreground mb-4">
                   Regular maintenance and proper care of paragliding equipment is essential for safety and longevity. 
                   Our on-site workshop offers comprehensive maintenance services performed by certified technicians.
@@ -176,19 +176,19 @@ export default function EquipmentPage() {
                 </p>
                 <div className="space-y-4 mb-8">
                   <div className="bg-card p-4 rounded-lg shadow-md">
-                    <h3 className="font-headline font-semibold text-lg text-foreground mb-2">Wing Inspections</h3>
+                    <h3 className="font-headline font-semibold text-base sm:text-lg text-foreground mb-2">Wing Inspections</h3>
                     <p className="text-muted-foreground text-sm">
                       Porosity testing, line measurements, trim checks, and repair services for all brands of paragliders.
                     </p>
                   </div>
                   <div className="bg-card p-4 rounded-lg shadow-md">
-                    <h3 className="font-headline font-semibold text-lg text-foreground mb-2">Reserve Repacking</h3>
+                    <h3 className="font-headline font-semibold text-base sm:text-lg text-foreground mb-2">Reserve Repacking</h3>
                     <p className="text-muted-foreground text-sm">
                       Professional reserve parachute inspection and repacking services, recommended every 6-12 months.
                     </p>
                   </div>
                   <div className="bg-card p-4 rounded-lg shadow-md">
-                    <h3 className="font-headline font-semibold text-lg text-foreground mb-2">Harness Repairs</h3>
+                    <h3 className="font-headline font-semibold text-base sm:text-lg text-foreground mb-2">Harness Repairs</h3>
                     <p className="text-muted-foreground text-sm">
                       Harness inspections, airbag testing, and repairs to ensure your safety and comfort in flight.
                     </p>
@@ -209,19 +209,19 @@ export default function EquipmentPage() {
       <AnimatedSection>
         <section className="py-20 bg-gradient-cta bg-cover bg-center bg-fixed text-white">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="font-headline font-bold text-4xl mb-6">Need Help Choosing Equipment?</h2>
+            <h2 className="font-headline font-bold text-3xl md:text-4xl mb-6">Need Help Choosing Equipment?</h2>
             <p className="max-w-2xl mx-auto mb-10 text-white/90">
               Our experienced staff can help you select the right equipment for your skill level, 
               flying style, and budget. Contact us for personalized advice.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link href="/contact">
-                <Button className="px-8 py-6 bg-accent text-accent-foreground font-sans font-medium rounded-full hover:bg-accent/90 transition">
+                <Button className="px-6 py-5 sm:px-8 sm:py-6 bg-accent text-accent-foreground font-sans font-medium rounded-full hover:bg-accent/90 transition">
                   Get Equipment Advice
                 </Button>
               </Link>
               <Link href="/courses">
-                <Button variant="outline" className="px-8 py-6 bg-white/10 backdrop-blur-sm border border-white/30 text-white font-sans font-medium rounded-full hover:bg-white/20 transition">
+                <Button variant="outline" className="px-6 py-5 sm:px-8 sm:py-6 bg-white/10 backdrop-blur-sm border border-white/30 text-white font-sans font-medium rounded-full hover:bg-white/20 transition">
                   Explore Our Courses
                 </Button>
               </Link>

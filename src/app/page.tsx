@@ -14,10 +14,10 @@ export default function Home() {
 
       {/* About Preview Section */}
       <AnimatedSection>
-        <section id="about-preview" className="py-20">
+        <section id="about-preview" className="py-12 md:py-20">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="font-headline font-bold text-4xl text-foreground mb-4">
+            <div className="text-center mb-12 md:mb-16">
+              <h2 className="font-headline font-bold text-3xl md:text-4xl text-foreground mb-4">
                 About <span className="text-primary">GEP Paragliding</span>
               </h2>
               <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
@@ -27,10 +27,10 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="flex flex-col md:flex-row items-center gap-10">
+            <div className="flex flex-col md:flex-row items-center gap-8 md:gap-10">
               <div className="md:w-1/2">
                 <Image 
-                  src="https://placehold.co/600x400.png"
+                  src="https://images.unsplash.com/photo-1472145246862-b24cf25c4a36?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
                   alt="Mountain landscape for paragliding" 
                   className="rounded-lg shadow-xl"
                   width={600}
@@ -39,7 +39,7 @@ export default function Home() {
                 />
               </div>
               <div className="md:w-1/2">
-                <h3 className="font-headline font-semibold text-3xl text-foreground mb-4">Our Story</h3>
+                <h3 className="font-headline font-semibold text-2xl md:text-3xl text-foreground mb-4">Our Story</h3>
                 <p className="text-muted-foreground mb-6">
                   Founded in 2005, GEP Paragliding began with a simple mission: to share the incredible 
                   experience of paragliding with the world. What started as a small operation with just 
@@ -53,15 +53,15 @@ export default function Home() {
                 
                 <div className="flex items-center space-x-8 mb-8 justify-center md:justify-start">
                   <div className="text-center">
-                    <p className="font-headline font-bold text-3xl text-primary">15+</p>
+                    <p className="font-headline font-bold text-2xl md:text-3xl text-primary">15+</p>
                     <p className="text-muted-foreground">Years Experience</p>
                   </div>
                   <div className="text-center">
-                    <p className="font-headline font-bold text-3xl text-primary">50+</p>
+                    <p className="font-headline font-bold text-2xl md:text-3xl text-primary">50+</p>
                     <p className="text-muted-foreground">Instructors</p>
                   </div>
                   <div className="text-center">
-                    <p className="font-headline font-bold text-3xl text-primary">5000+</p>
+                    <p className="font-headline font-bold text-2xl md:text-3xl text-primary">5000+</p>
                     <p className="text-muted-foreground">Students Trained</p>
                   </div>
                 </div>
@@ -79,10 +79,10 @@ export default function Home() {
 
       {/* Courses Preview Section */}
       <AnimatedSection>
-        <section id="courses-preview" className="py-20 bg-muted">
+        <section id="courses-preview" className="py-12 md:py-20 bg-muted">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="font-headline font-bold text-4xl text-foreground mb-4">
+            <div className="text-center mb-12 md:mb-16">
+              <h2 className="font-headline font-bold text-3xl md:text-4xl text-foreground mb-4">
                 Our <span className="text-primary">Courses & Services</span>
               </h2>
               <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
@@ -97,7 +97,7 @@ export default function Home() {
               <div className="bg-card rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
                 <div className="h-64 overflow-hidden">
                   <Image 
-                    src="https://placehold.co/600x400.png"
+                    src="https://images.unsplash.com/photo-1472145246862-b24cf25c4a36?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
                     alt="Tandem Paragliding Experience" 
                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                     width={600}
@@ -107,7 +107,7 @@ export default function Home() {
                 </div>
                 <div className="p-6">
                   <div className="flex justify-between items-center mb-3">
-                    <h3 className="font-headline font-bold text-xl text-foreground">Tandem Flight Experience</h3>
+                    <h3 className="font-headline font-bold text-lg md:text-xl text-foreground">Tandem Flight Experience</h3>
                     <span className="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm font-medium">Beginner</span>
                   </div>
                   <p className="text-muted-foreground mb-4">
@@ -115,7 +115,7 @@ export default function Home() {
                     No experience necessary - just bring your sense of adventure!
                   </p>
                   <div className="flex justify-between items-center">
-                    <span className="font-headline font-bold text-2xl text-foreground">₹2,500</span>
+                    <span className="font-headline font-bold text-xl md:text-2xl text-foreground">₹2,500</span>
                     <Link href="/booking">
                       <Button className="px-5 py-2 bg-primary text-primary-foreground font-headline rounded-full hover:bg-primary/90 transition">
                         Book Now
@@ -129,7 +129,7 @@ export default function Home() {
               <div className="bg-card rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
                 <div className="h-64 overflow-hidden">
                   <Image 
-                    src="https://placehold.co/600x400.png"
+                    src="https://images.unsplash.com/photo-1472145246862-b24cf25c4a36?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
                     alt="Basic Paragliding Course" 
                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                     width={600}
@@ -139,7 +139,7 @@ export default function Home() {
                 </div>
                 <div className="p-6">
                   <div className="flex justify-between items-center mb-3">
-                    <h3 className="font-headline font-bold text-xl text-foreground">P1 Basic Course</h3>
+                    <h3 className="font-headline font-bold text-lg md:text-xl text-foreground">P1 Basic Course</h3>
                     <span className="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm font-medium">Beginner</span>
                   </div>
                   <p className="text-muted-foreground mb-4">
@@ -147,7 +147,7 @@ export default function Home() {
                     solo flights under instructor supervision.
                   </p>
                   <div className="flex justify-between items-center">
-                    <span className="font-headline font-bold text-2xl text-foreground">₹15,000</span>
+                    <span className="font-headline font-bold text-xl md:text-2xl text-foreground">₹15,000</span>
                     <Link href="/booking">
                       <Button className="px-5 py-2 bg-primary text-primary-foreground font-headline rounded-full hover:bg-primary/90 transition">
                         Enroll Now
@@ -161,7 +161,7 @@ export default function Home() {
               <div className="bg-card rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
                 <div className="h-64 overflow-hidden">
                   <Image 
-                    src="https://placehold.co/600x400.png" 
+                    src="https://images.unsplash.com/photo-1472145246862-b24cf25c4a36?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
                     alt="Advanced Paragliding Course" 
                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                     width={600}
@@ -171,7 +171,7 @@ export default function Home() {
                 </div>
                 <div className="p-6">
                   <div className="flex justify-between items-center mb-3">
-                    <h3 className="font-headline font-bold text-xl text-foreground">P2 Intermediate Course</h3>
+                    <h3 className="font-headline font-bold text-lg md:text-xl text-foreground">P2 Intermediate Course</h3>
                     <span className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium">Intermediate</span>
                   </div>
                   <p className="text-muted-foreground mb-4">
@@ -179,7 +179,7 @@ export default function Home() {
                     and longer mountain flights.
                   </p>
                   <div className="flex justify-between items-center">
-                    <span className="font-headline font-bold text-2xl text-foreground">₹25,000</span>
+                    <span className="font-headline font-bold text-xl md:text-2xl text-foreground">₹25,000</span>
                     <Link href="/booking">
                       <Button className="px-5 py-2 bg-primary text-primary-foreground font-headline rounded-full hover:bg-primary/90 transition">
                         Enroll Now
@@ -203,10 +203,10 @@ export default function Home() {
 
       {/* Gallery Preview */}
       <AnimatedSection>
-        <section id="gallery-preview" className="py-20">
+        <section id="gallery-preview" className="py-12 md:py-20">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="font-headline font-bold text-4xl text-foreground mb-4">
+            <div className="text-center mb-12 md:mb-16">
+              <h2 className="font-headline font-bold text-3xl md:text-4xl text-foreground mb-4">
                 Our <span className="text-primary">Gallery</span>
               </h2>
               <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
@@ -219,9 +219,9 @@ export default function Home() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               <div className="overflow-hidden rounded-lg transition-all duration-300 hover:shadow-xl">
                 <Image 
-                  src="https://placehold.co/600x600.png"
+                  src="https://images.unsplash.com/photo-1472145246862-b24cf25c4a36?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
                   alt="Paraglider over mountains" 
-                  className="w-full h-64 object-cover transition-transform duration-500 hover:scale-105"
+                  className="w-full h-48 sm:h-64 object-cover transition-transform duration-500 hover:scale-105"
                   width={600}
                   height={600}
                   data-ai-hint="paraglider mountains"
@@ -229,9 +229,9 @@ export default function Home() {
               </div>
               <div className="overflow-hidden rounded-lg transition-all duration-300 hover:shadow-xl">
                 <Image 
-                  src="https://placehold.co/600x600.png"
+                  src="https://images.unsplash.com/photo-1472145246862-b24cf25c4a36?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
                   alt="Paraglider in sunset" 
-                  className="w-full h-64 object-cover transition-transform duration-500 hover:scale-105"
+                  className="w-full h-48 sm:h-64 object-cover transition-transform duration-500 hover:scale-105"
                   width={600}
                   height={600}
                   data-ai-hint="paragliding sunset"
@@ -239,9 +239,9 @@ export default function Home() {
               </div>
               <div className="overflow-hidden rounded-lg transition-all duration-300 hover:shadow-xl">
                 <Image 
-                  src="https://placehold.co/600x600.png" 
+                  src="https://images.unsplash.com/photo-1472145246862-b24cf25c4a36?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
                   alt="Paraglider launching" 
-                  className="w-full h-64 object-cover transition-transform duration-500 hover:scale-105"
+                  className="w-full h-48 sm:h-64 object-cover transition-transform duration-500 hover:scale-105"
                   width={600}
                   height={600}
                   data-ai-hint="paraglider launch"
@@ -249,9 +249,9 @@ export default function Home() {
               </div>
               <div className="overflow-hidden rounded-lg transition-all duration-300 hover:shadow-xl">
                 <Image 
-                  src="https://placehold.co/600x600.png"
+                  src="https://images.unsplash.com/photo-1472145246862-b24cf25c4a36?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
                   alt="Mountain landscape view" 
-                  className="w-full h-64 object-cover transition-transform duration-500 hover:scale-105"
+                  className="w-full h-48 sm:h-64 object-cover transition-transform duration-500 hover:scale-105"
                   width={600}
                   height={600}
                   data-ai-hint="mountain view"
@@ -274,19 +274,19 @@ export default function Home() {
       <AnimatedSection>
         <section className="py-20 bg-gradient-cta bg-cover bg-center bg-fixed text-white">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="font-headline font-bold text-4xl mb-6">Ready to Experience the Thrill of Flight?</h2>
+            <h2 className="font-headline font-bold text-3xl md:text-4xl mb-6">Ready to Experience the Thrill of Flight?</h2>
             <p className="max-w-2xl mx-auto mb-10 text-white/90">
               Join thousands of adventure seekers who have discovered the freedom of paragliding with us.
               Book your adventure today and create memories that will last a lifetime.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link href="/booking">
-                <Button className="px-8 py-6 bg-accent text-accent-foreground font-headline font-medium rounded-full hover:bg-accent/90 transition">
+                <Button className="px-6 py-5 sm:px-8 sm:py-6 bg-accent text-accent-foreground font-headline font-medium rounded-full hover:bg-accent/90 transition">
                   Book Your Flight
                 </Button>
               </Link>
               <Link href="/contact">
-                <Button variant="outline" className="px-8 py-6 bg-white/10 backdrop-blur-sm border border-white/30 text-white font-headline font-medium rounded-full hover:bg-white/20 transition">
+                <Button variant="outline" className="px-6 py-5 sm:px-8 sm:py-6 bg-white/10 backdrop-blur-sm border border-white/30 text-white font-headline font-medium rounded-full hover:bg-white/20 transition">
                   Contact Us
                 </Button>
               </Link>

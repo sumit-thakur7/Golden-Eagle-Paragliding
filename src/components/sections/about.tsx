@@ -30,7 +30,7 @@ export default function AboutSection() {
               </div>
               <div className="flex items-center justify-center">
                 <Image
-                  src="https://placehold.co/600x400.png"
+                  src="https://images.unsplash.com/photo-1472145246862-b24cf25c4a36?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
                   alt="A team of paragliding instructors"
                   width={600}
                   height={400}

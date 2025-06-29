@@ -33,7 +33,7 @@ export default function BlogPage() {
       {/* Header Banner */}
       <section className="pt-32 pb-16 bg-gradient-cta bg-cover bg-center">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="font-headline font-bold text-4xl md:text-5xl text-white mb-4">Blog</h1>
+          <h1 className="font-headline font-bold text-4xl sm:text-5xl text-white mb-4">Blog</h1>
           <p className="text-white/90 max-w-3xl mx-auto">
             Stay updated with the latest paragliding tips, stories, and adventures from our community.
           </p>
@@ -42,10 +42,10 @@ export default function BlogPage() {
 
       {/* Featured Posts */}
       <AnimatedSection>
-        <section className="py-20">
+        <section className="py-12 md:py-20">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="font-headline font-bold text-4xl text-foreground mb-4">
+            <div className="text-center mb-12 md:mb-16">
+              <h2 className="font-headline font-bold text-3xl md:text-4xl text-foreground mb-4">
                 Featured <span className="text-primary">Articles</span>
               </h2>
               <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
@@ -75,7 +75,7 @@ export default function BlogPage() {
                         <span className="mx-2">•</span>
                         <span className="flex items-center"><LucideIcons.User className="h-4 w-4 mr-1" /> {post.author}</span>
                       </div>
-                      <h3 className="font-headline font-bold text-xl text-foreground mb-3 flex-grow">{post.title}</h3>
+                      <h3 className="font-headline font-bold text-lg sm:text-xl text-foreground mb-3 flex-grow">{post.title}</h3>
                       <p className="text-muted-foreground mb-4 text-sm">{post.excerpt}</p>
                       <Link href={`/blog/${post.id}`} className="mt-auto">
                         <Button variant="link" className="text-primary font-sans font-medium hover:text-primary/80 transition p-0 flex items-center">
@@ -93,10 +93,10 @@ export default function BlogPage() {
 
       {/* Recent Posts */}
       <AnimatedSection>
-        <section className="py-20 bg-muted">
+        <section className="py-12 md:py-20 bg-muted">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="font-headline font-bold text-4xl text-foreground mb-4">
+            <div className="text-center mb-12 md:mb-16">
+              <h2 className="font-headline font-bold text-3xl md:text-4xl text-foreground mb-4">
                 Recent <span className="text-primary">Articles</span>
               </h2>
               <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
@@ -125,10 +125,10 @@ export default function BlogPage() {
 
       {/* Categories */}
       <AnimatedSection>
-        <section className="py-20">
+        <section className="py-12 md:py-20">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="font-headline font-bold text-4xl text-foreground mb-4">
+            <div className="text-center mb-12 md:mb-16">
+              <h2 className="font-headline font-bold text-3xl md:text-4xl text-foreground mb-4">
                 Blog <span className="text-primary">Categories</span>
               </h2>
               <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
@@ -147,7 +147,7 @@ export default function BlogPage() {
                   <div className="text-4xl mb-4 text-primary w-12 h-12">
                      <IconComponent name={category.icon} />
                   </div>
-                  <h3 className="font-headline font-bold text-xl text-foreground mb-2">{category.name}</h3>
+                  <h3 className="font-headline font-bold text-lg sm:text-xl text-foreground mb-2">{category.name}</h3>
                   <p className="text-muted-foreground text-sm mb-4 flex-grow">{category.description}</p>
                   <Link href={`/blog/category/${category.slug}`} className="mt-auto">
                     <Button variant="outline" className="rounded-full border-primary text-primary hover:bg-primary/5">
@@ -165,7 +165,7 @@ export default function BlogPage() {
       <AnimatedSection>
         <section className="py-20 bg-gradient-cta bg-cover bg-center bg-fixed text-white">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="font-headline font-bold text-4xl mb-6">Subscribe to Our Newsletter</h2>
+            <h2 className="font-headline font-bold text-3xl md:text-4xl mb-6">Subscribe to Our Newsletter</h2>
             <p className="max-w-2xl mx-auto mb-10 text-white/90">
               Get the latest paragliding articles, tips, and updates delivered directly to your inbox.
               We promise not to spam you – only valuable content related to paragliding.

@@ -8,10 +8,10 @@ export default function NotFound() {
     <div className="flex min-h-[calc(100vh-8rem)] items-center justify-center bg-background px-4 py-12">
       <Card className="w-full max-w-md text-center">
         <CardHeader>
-          <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-destructive/10">
-            <AlertTriangle className="h-10 w-10 text-destructive" />
+          <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-destructive/10 sm:h-16 sm:w-16">
+            <AlertTriangle className="h-8 w-8 text-destructive sm:h-10 sm:w-10" />
           </div>
-          <CardTitle className="mt-4 text-2xl md:text-3xl font-bold tracking-tight text-foreground">
+          <CardTitle className="mt-4 text-xl font-bold tracking-tight text-foreground sm:text-2xl md:text-3xl">
             404 - Page Not Found
           </CardTitle>
         </CardHeader>
