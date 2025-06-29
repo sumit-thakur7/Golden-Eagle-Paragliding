@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Hero from "@/components/hero";
 import AnimatedSection from "@/components/AnimatedSection";
 import Link from "next/link";
@@ -10,12 +9,7 @@ import { ChevronRight } from "lucide-react";
 
 export default function Home() {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.5 }}
-    >
+    <div>
       <Hero />
 
       {/* About Preview Section */}
@@ -300,6 +294,6 @@ export default function Home() {
           </div>
         </section>
       </AnimatedSection>
-    </motion.div>
+    </div>
   );
 }

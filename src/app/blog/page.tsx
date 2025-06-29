@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import AnimatedSection from "@/components/AnimatedSection";
 import Link from "next/link";
 import Image from "next/image";
@@ -10,6 +9,7 @@ import * as LucideIcons from "lucide-react";
 import { blogData } from "@/lib/blog-data";
 import { formatDate } from "@/lib/utils";
 import BlogCard from "@/components/BlogCard";
+import { motion } from "framer-motion";
 
 // A type guard to check if a string is a valid Lucide icon name
 function isLucideIcon(name: string): name is keyof typeof LucideIcons {
@@ -29,12 +29,7 @@ const IconComponent = ({ name }: { name: string }) => {
 export default function BlogPage() {
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.5 }}
-    >
+    <div>
       {/* Header Banner */}
       <section className="pt-32 pb-16 bg-gradient-cta bg-cover bg-center">
         <div className="container mx-auto px-4 text-center">
@@ -191,6 +186,6 @@ export default function BlogPage() {
           </div>
         </section>
       </AnimatedSection>
-    </motion.div>
+    </div>
   );
 }

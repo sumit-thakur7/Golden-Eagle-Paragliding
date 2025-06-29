@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
@@ -12,12 +11,7 @@ import ServiceCard from "@/components/ServiceCard";
 
 export default function CoursesPage() {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.5 }}
-    >
+    <div>
       {/* Header Banner */}
       <section className="pt-32 pb-16 bg-gradient-cta bg-cover bg-center">
         <div className="container mx-auto px-4 text-center">
@@ -355,6 +349,6 @@ export default function CoursesPage() {
           </div>
         </section>
       </AnimatedSection>
-    </motion.div>
+    </div>
   );
 }

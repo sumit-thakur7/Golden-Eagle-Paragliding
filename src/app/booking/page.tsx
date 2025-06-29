@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -112,12 +111,7 @@ export default function BookingPage() {
   }
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.5 }}
-    >
+    <div>
       {/* Header Banner */}
       <section className="pt-32 pb-16 bg-gradient-cta bg-cover bg-center">
         <div className="container mx-auto px-4 text-center">
@@ -376,6 +370,6 @@ export default function BookingPage() {
           </div>
         </section>
       </AnimatedSection>
-    </motion.div>
+    </div>
   );
 }
