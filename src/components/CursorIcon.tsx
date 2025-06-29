@@ -1,76 +1,97 @@
 "use client";
 
-import React, { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 
+// Animation durations
+const ANIMATION_TIMEOUTS = {
+  IDLE: 2000, // 2s after mouse stops
+  SWING: 10000, // swing runs 10s
+  SPIN: 25000,  // spin runs 25s
+};
+
+const ICON_DIMENSIONS = {
+  WIDTH: 100,
+  HEIGHT: 150,
+  OFFSET: 10,
+};
+
+type Direction = "left" | "right" | "up" | "down";
+type AnimationStage = "idle" | "swing" | "spin";
+
 export default function CursorIcon() {
-  const [position, setPosition] = useState({ x: -200, y: -200 });
-  const [adjustedPosition, setAdjustedPosition] = useState({ x: -200, y: -200 });
-  const [direction, setDirection] = useState<"left" | "right" | "up" | "down">("right");
-  const [isSpinning, setIsSpinning] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
+  const [adjustedPosition, setAdjustedPosition] = useState({ x: 0, y: 0 });
+  const [direction, setDirection] = useState<Direction>("right");
+  const [animationStage, setAnimationStage] = useState<AnimationStage>("idle");
 
   const prevPos = useRef({ x: 0, y: 0 });
-  const iconWidth = 100;
-  const iconHeight = 150;
-  const offset = 10;
-  const idleTimeout = useRef<number | null>(null);
+  const loopInterval = useRef<NodeJS.Timeout | null>(null);
+  const idleTimeout = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
+    let animationFrameId: number;
+
     const moveHandler = (e: MouseEvent) => {
-      const x = e.clientX;
-      const y = e.clientY;
-      const windowWidth = window.innerWidth;
-      const windowHeight = window.innerHeight;
-
-      const dx = x - prevPos.current.x;
-      const dy = y - prevPos.current.y;
-
-      if (Math.abs(dx) > Math.abs(dy)) {
-        setDirection(dx > 0 ? "right" : "left");
-      } else {
-        setDirection(dy > 0 ? "down" : "up");
-      }
-
-      let adjustedX = x + offset;
-      let adjustedY = y + offset;
-
-      if (x + iconWidth + offset > windowWidth) {
-        adjustedX = x - iconWidth - offset;
-      }
-      if (y + iconHeight + offset > windowHeight) {
-        adjustedY = y - iconHeight - offset;
-      }
-
-      setPosition({ x, y });
-      setAdjustedPosition({ x: adjustedX, y: adjustedY });
-
-      prevPos.current = { x, y };
-
-      setIsSpinning(false);
+      if (animationFrameId) cancelAnimationFrame(animationFrameId);
+      if (loopInterval.current) clearInterval(loopInterval.current);
       if (idleTimeout.current) clearTimeout(idleTimeout.current);
 
-      idleTimeout.current = window.setTimeout(() => {
-        setIsSpinning(true);
-      }, 2000);
+      animationFrameId = requestAnimationFrame(() => {
+        const { clientX: x, clientY: y } = e;
+        const windowWidth = window.innerWidth;
+        const windowHeight = window.innerHeight;
+        const { WIDTH, HEIGHT, OFFSET } = ICON_DIMENSIONS;
+
+        const dx = x - prevPos.current.x;
+        const dy = y - prevPos.current.y;
+
+        if (Math.abs(dx) > Math.abs(dy)) {
+          setDirection(dx > 0 ? "right" : "left");
+        } else {
+          setDirection(dy > 0 ? "down" : "up");
+        }
+
+        let adjustedX = x + OFFSET;
+        let adjustedY = y + OFFSET;
+
+        if (x + WIDTH + OFFSET > windowWidth) {
+          adjustedX = x - WIDTH - OFFSET;
+        }
+        if (y + HEIGHT + OFFSET > windowHeight) {
+          adjustedY = y - HEIGHT - OFFSET;
+        }
+
+        setAdjustedPosition({ x: adjustedX, y: adjustedY });
+        prevPos.current = { x, y };
+
+        // Reset to idle
+        setAnimationStage("idle");
+
+        // Start idle countdown → swing → spin → loop
+        idleTimeout.current = setTimeout(() => {
+          setAnimationStage("swing");
+
+          // Start loop: swing → spin → swing...
+          loopInterval.current = setInterval(() => {
+            setAnimationStage((prev) =>
+              prev === "swing" ? "spin" : "swing"
+            );
+          }, ANIMATION_TIMEOUTS.SWING + ANIMATION_TIMEOUTS.SPIN);
+        }, ANIMATION_TIMEOUTS.IDLE);
+      });
     };
-    
-    const mouseEnterHandler = () => setIsVisible(true);
-    const mouseLeaveHandler = () => setIsVisible(false);
 
     window.addEventListener("mousemove", moveHandler);
-    document.body.addEventListener("mouseenter", mouseEnterHandler);
-    document.body.addEventListener("mouseleave", mouseLeaveHandler);
 
     return () => {
       window.removeEventListener("mousemove", moveHandler);
-      document.body.removeEventListener("mouseenter", mouseEnterHandler);
-      document.body.removeEventListener("mouseleave", mouseLeaveHandler);
+      if (animationFrameId) cancelAnimationFrame(animationFrameId);
+      if (loopInterval.current) clearInterval(loopInterval.current);
       if (idleTimeout.current) clearTimeout(idleTimeout.current);
     };
   }, []);
 
-  const transform = (() => {
+  const directionTransform = (() => {
     switch (direction) {
       case "left":
         return "scaleX(-1)";
@@ -83,23 +104,62 @@ export default function CursorIcon() {
     }
   })();
 
+  const animationClass =
+    animationStage === "spin"
+      ? "spin-animation"
+      : animationStage === "swing"
+      ? "swing-animation"
+      : "";
+
   return (
-    <Image
-      src="https://www.flyinsite.de/images/paragleiter-sport-logo.png"
-      alt="paraglider cursor icon"
-      width={iconWidth}
-      height={iconHeight}
-      className={`fixed z-50 pointer-events-none transition-all duration-100 ease-linear hidden md:block ${
-        isSpinning ? "animate-spin-slow" : ""
-      } ${
-        isVisible ? "opacity-100" : "opacity-0"
-      }`}
+    <div
+      className="fixed z-50 pointer-events-none"
       style={{
         left: adjustedPosition.x,
         top: adjustedPosition.y,
-        transform,
+        width: ICON_DIMENSIONS.WIDTH,
+        height: ICON_DIMENSIONS.HEIGHT,
+        transform: directionTransform,
       }}
-      unoptimized
-    />
+    >
+      <style jsx global>{`
+        @keyframes swingFast {
+          0%, 100% { transform: rotate(0deg); }
+          10% { transform: rotate(25deg); }
+          20% { transform: rotate(-25deg); }
+          30% { transform: rotate(20deg); }
+          40% { transform: rotate(-20deg); }
+          50% { transform: rotate(15deg); }
+          60% { transform: rotate(-15deg); }
+          70% { transform: rotate(10deg); }
+          80% { transform: rotate(-10deg); }
+          90% { transform: rotate(5deg); }
+        }
+
+        @keyframes spinFast {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(1080deg); } /* 3 spins */
+        }
+
+        .swing-animation {
+          animation: swingFast 10s ease-in-out forwards;
+        }
+
+        .spin-animation {
+          animation: spinFast 25s linear forwards;
+        }
+      `}</style>
+
+      <div className={`w-full h-full ${animationClass}`}>
+        <Image
+          src="/images/icons.png"
+          alt="Animated cursor icon"
+          width={ICON_DIMENSIONS.WIDTH}
+          height={ICON_DIMENSIONS.HEIGHT}
+          priority
+          unoptimized
+        />
+      </div>
+    </div>
   );
 }
