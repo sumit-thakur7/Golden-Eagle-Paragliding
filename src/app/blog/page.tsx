@@ -1,34 +1,7 @@
 import BlogCard from "@/components/BlogCard";
+import { blogData } from "@/lib/blog-data";
 
-const blogPosts = [
-  {
-    title: "Top 5 Safety Tips for First-Time Flyers",
-    excerpt:
-      "Paragliding is an exhilarating sport, but safety always comes first. Here are our top tips to ensure a safe and enjoyable flight.",
-    author: "Jane Doe",
-    date: "July 22, 2024",
-    image: "https://placehold.co/600x400.png",
-    slug: "safety-tips-for-first-time-flyers",
-  },
-  {
-    title: "The Science of Thermals: How Paragliders Stay Aloft",
-    excerpt:
-      "Ever wondered how paragliders can stay in the air for hours? The secret lies in rising columns of warm air called thermals.",
-    author: "John Smith",
-    date: "July 18, 2024",
-    image: "https://placehold.co/600x400.png",
-    slug: "science-of-thermals",
-  },
-  {
-    title: "A Guide to Paragliding in the Himalayas",
-    excerpt:
-      "The Himalayas offer some of the most spectacular scenery for paragliding. Here’s what you need to know for your high-altitude adventure.",
-    author: "Anjali Sharma",
-    date: "July 15, 2024",
-    image: "https://placehold.co/600x400.png",
-    slug: "paragliding-in-himalayas",
-  },
-];
+const allPosts = [...blogData.featured, ...blogData.recent];
 
 export default function BlogPage() {
   return (
@@ -41,15 +14,15 @@ export default function BlogPage() {
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-        {blogPosts.map((post, index) => (
+        {allPosts.map((post, index) => (
           <BlogCard
-            key={post.slug}
+            key={post.id}
             title={post.title}
             excerpt={post.excerpt}
             author={post.author}
             date={post.date}
             image={post.image}
-            slug={post.slug}
+            slug={post.id}
             index={index}
           />
         ))}
