@@ -44,7 +44,7 @@ export default function AboutPage() {
       {/* Header Banner */}
       <section className="pt-32 pb-16 bg-gradient-cta bg-cover bg-center">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="font-headline font-bold text-5xl text-white mb-4">About Us</h1>
+          <h1 className="font-headline font-bold text-4xl md:text-5xl text-white mb-4">About Us</h1>
           <p className="text-white/90 max-w-3xl mx-auto">
             Learn about our journey, mission, and passion for bringing the experience of paragliding to adventure enthusiasts around the world.
           </p>
@@ -97,19 +97,19 @@ export default function AboutPage() {
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
               <div className="bg-card p-8 rounded-xl shadow-lg hover:shadow-xl transition">
-                <p className="font-headline font-bold text-5xl text-primary mb-2">15+</p>
+                <p className="font-headline font-bold text-4xl md:text-5xl text-primary mb-2">15+</p>
                 <p className="text-muted-foreground font-medium">Years of Experience</p>
               </div>
               <div className="bg-card p-8 rounded-xl shadow-lg hover:shadow-xl transition">
-                <p className="font-headline font-bold text-5xl text-primary mb-2">50+</p>
+                <p className="font-headline font-bold text-4xl md:text-5xl text-primary mb-2">50+</p>
                 <p className="text-muted-foreground font-medium">Certified Instructors</p>
               </div>
               <div className="bg-card p-8 rounded-xl shadow-lg hover:shadow-xl transition">
-                <p className="font-headline font-bold text-5xl text-primary mb-2">5000+</p>
+                <p className="font-headline font-bold text-4xl md:text-5xl text-primary mb-2">5000+</p>
                 <p className="text-muted-foreground font-medium">Students Trained</p>
               </div>
               <div className="bg-card p-8 rounded-xl shadow-lg hover:shadow-xl transition">
-                <p className="font-headline font-bold text-5xl text-primary mb-2">10+</p>
+                <p className="font-headline font-bold text-4xl md:text-5xl text-primary mb-2">10+</p>
                 <p className="text-muted-foreground font-medium">Flying Locations</p>
               </div>
             </div>

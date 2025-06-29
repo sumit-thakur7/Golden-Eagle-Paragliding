@@ -27,7 +27,7 @@ export default function TestimonialsPage() {
       {/* Header Banner */}
       <section className="pt-32 pb-16 bg-gradient-cta bg-cover bg-center">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="font-headline font-bold text-5xl text-white mb-4">Testimonials</h1>
+          <h1 className="font-headline font-bold text-4xl md:text-5xl text-white mb-4">Testimonials</h1>
           <p className="text-white/90 max-w-3xl mx-auto">
             Don't just take our word for it. Hear from the adventurers who have 
             experienced the thrill of paragliding with us.
@@ -209,7 +209,7 @@ export default function TestimonialsPage() {
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl hover:bg-white/20 transition">
-                <div className="font-headline font-bold text-5xl mb-2">4.9/5</div>
+                <div className="font-headline font-bold text-4xl md:text-5xl mb-2">4.9/5</div>
                 <p className="mb-3">Overall Rating</p>
                 <div className="flex justify-center text-primary">
                   {renderStars(4.9)}
@@ -217,17 +217,17 @@ export default function TestimonialsPage() {
               </div>
               
               <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl hover:bg-white/20 transition">
-                <div className="font-headline font-bold text-5xl mb-2">98%</div>
+                <div className="font-headline font-bold text-4xl md:text-5xl mb-2">98%</div>
                 <p>Would Recommend</p>
               </div>
               
               <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl hover:bg-white/20 transition">
-                <div className="font-headline font-bold text-5xl mb-2">5000+</div>
+                <div className="font-headline font-bold text-4xl md:text-5xl mb-2">5000+</div>
                 <p>Happy Customers</p>
               </div>
               
               <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl hover:bg-white/20 transition">
-                <div className="font-headline font-bold text-5xl mb-2">85%</div>
+                <div className="font-headline font-bold text-4xl md:text-5xl mb-2">85%</div>
                 <p>Return Customers</p>
               </div>
             </div>

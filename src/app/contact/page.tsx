@@ -55,7 +55,7 @@ export default function ContactPage() {
       {/* Header Banner */}
       <section className="pt-32 pb-16 bg-gradient-cta bg-cover bg-center">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="font-headline font-bold text-5xl text-white mb-4">Contact Us</h1>
+          <h1 className="font-headline font-bold text-4xl md:text-5xl text-white mb-4">Contact Us</h1>
           <p className="text-white/90 max-w-3xl mx-auto">
             Have questions or want to learn more about our paragliding services? 
             Get in touch with our team.
@@ -118,7 +118,7 @@ export default function ContactPage() {
                 
                 <div className="bg-card p-8 rounded-xl shadow-lg">
                   <h2 className="font-headline font-bold text-2xl text-foreground mb-6">Connect With Us</h2>
-                  <div className="flex space-x-4">
+                  <div className="flex flex-wrap gap-4">
                     <a href="#" aria-label="Facebook" className="bg-[#3b5998] text-white p-3 rounded-full hover:opacity-90 transition"><Facebook /></a>
                     <a href="#" aria-label="Twitter" className="bg-[#1da1f2] text-white p-3 rounded-full hover:opacity-90 transition"><Twitter /></a>
                     <a href="#" aria-label="Instagram" className="bg-gradient-to-r from-yellow-500 via-pink-500 to-purple-600 text-white p-3 rounded-full hover:opacity-90 transition"><Instagram /></a>
@@ -206,7 +206,7 @@ export default function ContactPage() {
       <AnimatedSection>
         <section className="py-10">
           <div className="container mx-auto px-4">
-            <div className="rounded-xl overflow-hidden shadow-lg h-96">
+            <div className="rounded-xl overflow-hidden shadow-lg h-64 md:h-96">
               <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13511.839311727055!2d76.71769716977537!3d32.03297619999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3904a15c810f5657%3A0x43c91b5d86b15c9e!2sBir%20Billing%20Paragliding!5e0!3m2!1sen!2sin!4v1660000000000!5m2!1sen!2sin" 
                 width="100%" 

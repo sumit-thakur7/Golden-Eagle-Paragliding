@@ -11,7 +11,7 @@ export default function NotFound() {
           <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-destructive/10">
             <AlertTriangle className="h-10 w-10 text-destructive" />
           </div>
-          <CardTitle className="mt-4 text-3xl font-bold tracking-tight text-foreground">
+          <CardTitle className="mt-4 text-2xl md:text-3xl font-bold tracking-tight text-foreground">
             404 - Page Not Found
           </CardTitle>
         </CardHeader>

@@ -115,7 +115,7 @@ export default function BookingPage() {
       {/* Header Banner */}
       <section className="pt-32 pb-16 bg-gradient-cta bg-cover bg-center">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="font-headline font-bold text-5xl text-white mb-4">Book Your Adventure</h1>
+          <h1 className="font-headline font-bold text-4xl md:text-5xl text-white mb-4">Book Your Adventure</h1>
           <p className="text-white/90 max-w-3xl mx-auto">
             Ready to experience the thrill of paragliding? Reserve your spot now and prepare for an unforgettable adventure.
           </p>
@@ -281,7 +281,7 @@ export default function BookingPage() {
                     <Button 
                       type="submit" 
                       disabled={form.formState.isSubmitting}
-                      className="w-full px-8 py-4 bg-primary text-primary-foreground font-sans font-medium rounded-full hover:bg-primary/90 transition text-lg"
+                      className="w-full px-8 py-4 bg-primary text-primary-foreground font-sans font-medium rounded-full hover:bg-primary/90 transition text-base md:text-lg"
                     >
                       {form.formState.isSubmitting ? "Processing..." : "Book Your Adventure Now"}
                     </Button>

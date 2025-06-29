@@ -17,7 +17,7 @@ export default function FaqPage() {
       {/* Header Banner */}
       <section className="pt-32 pb-16 bg-gradient-cta bg-cover bg-center">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="font-headline font-bold text-5xl text-white mb-4">Frequently Asked Questions</h1>
+          <h1 className="font-headline font-bold text-4xl md:text-5xl text-white mb-4">Frequently Asked Questions</h1>
           <p className="text-white/90 max-w-3xl mx-auto">
             Find answers to common questions about paragliding experiences, 
             courses, and safety measures.
@@ -45,7 +45,7 @@ export default function FaqPage() {
               <Accordion type="single" collapsible className="space-y-4">
                 {faqData.general.map((faq, index) => (
                   <AccordionItem key={`general-${index}`} value={`faq-general-${index}`} className="rounded-lg border bg-card shadow-sm">
-                    <AccordionTrigger className="p-6 text-left font-headline text-lg font-semibold hover:no-underline">
+                    <AccordionTrigger className="p-6 text-left font-headline text-base md:text-lg font-semibold hover:no-underline">
                       {faq.question}
                     </AccordionTrigger>
                     <AccordionContent className="px-6 pb-6">
@@ -81,7 +81,7 @@ export default function FaqPage() {
                 <Accordion type="single" collapsible className="space-y-4">
                   {faqData.beginners.map((faq, index) => (
                     <AccordionItem key={`beginners-${index}`} value={`faq-beginner-${index}`} className="rounded-lg border bg-card shadow-sm">
-                      <AccordionTrigger className="p-6 text-left font-headline text-lg font-semibold hover:no-underline">
+                      <AccordionTrigger className="p-6 text-left font-headline text-base md:text-lg font-semibold hover:no-underline">
                         {faq.question}
                       </AccordionTrigger>
                       <AccordionContent className="px-6 pb-6">
@@ -98,7 +98,7 @@ export default function FaqPage() {
                 <Accordion type="single" collapsible className="space-y-4">
                   {faqData.courses.map((faq, index) => (
                     <AccordionItem key={`courses-${index}`} value={`faq-course-${index}`} className="rounded-lg border bg-card shadow-sm">
-                      <AccordionTrigger className="p-6 text-left font-headline text-lg font-semibold hover:no-underline">
+                      <AccordionTrigger className="p-6 text-left font-headline text-base md:text-lg font-semibold hover:no-underline">
                         {faq.question}
                       </AccordionTrigger>
                       <AccordionContent className="px-6 pb-6">
@@ -115,7 +115,7 @@ export default function FaqPage() {
                 <Accordion type="single" collapsible className="space-y-4">
                   {faqData.equipment.map((faq, index) => (
                     <AccordionItem key={`equipment-${index}`} value={`faq-equipment-${index}`} className="rounded-lg border bg-card shadow-sm">
-                      <AccordionTrigger className="p-6 text-left font-headline text-lg font-semibold hover:no-underline">
+                      <AccordionTrigger className="p-6 text-left font-headline text-base md:text-lg font-semibold hover:no-underline">
                         {faq.question}
                       </AccordionTrigger>
                       <AccordionContent className="px-6 pb-6">

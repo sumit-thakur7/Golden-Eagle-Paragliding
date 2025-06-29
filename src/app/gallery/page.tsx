@@ -34,7 +34,7 @@ export default function GalleryPage() {
       {/* Header Banner */}
       <section className="pt-32 pb-16 bg-gradient-cta bg-cover bg-center">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="font-headline font-bold text-5xl text-white mb-4">Gallery</h1>
+          <h1 className="font-headline font-bold text-4xl md:text-5xl text-white mb-4">Gallery</h1>
           <p className="text-white/90 max-w-3xl mx-auto">
             Explore stunning moments captured during our paragliding adventures. 
             Each image tells a story of freedom, adventure, and the beauty of flight.

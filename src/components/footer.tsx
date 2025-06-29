@@ -49,7 +49,7 @@ export default function Footer() {
               </div>
             </Link>
             <p className="mb-6">Experience the freedom of flight with India's premier paragliding destination. Professional training, breathtaking views, and unforgettable experiences await you.</p>
-            <div className="flex space-x-4">
+            <div className="flex flex-wrap gap-4">
               <a href="#" className="text-background/80 hover:text-primary transition">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
@@ -105,8 +105,7 @@ export default function Footer() {
             <h3 className="font-headline font-semibold text-xl text-background mb-6">Newsletter</h3>
             <p className="mb-4">Subscribe to our newsletter for the latest updates, offers, and paragliding tips.</p>
             <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="mb-6">
-                <div className="flex">
+              <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col sm:flex-row gap-2 mb-6">
                   <FormField
                     control={form.control}
                     name="email"
@@ -117,7 +116,7 @@ export default function Footer() {
                             {...field} 
                             type="email" 
                             placeholder="Your email address" 
-                            className="px-4 py-2 rounded-l-full border-0 focus:outline-none focus:ring-2 focus:ring-primary/50 w-full bg-background text-foreground" 
+                            className="px-4 py-2 rounded-full border-0 focus:outline-none focus:ring-2 focus:ring-primary/50 w-full bg-background text-foreground h-11" 
                           />
                         </FormControl>
                       </FormItem>
@@ -126,14 +125,10 @@ export default function Footer() {
                   <Button 
                     type="submit" 
                     disabled={form.formState.isSubmitting}
-                    className="bg-primary text-primary-foreground px-4 py-2 rounded-r-full hover:bg-primary/90 transition"
+                    className="bg-primary text-primary-foreground px-6 rounded-full hover:bg-primary/90 transition h-11"
                   >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <line x1="22" y1="2" x2="11" y2="13"></line>
-                      <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                    </svg>
+                    Subscribe
                   </Button>
-                </div>
               </form>
             </Form>
             <div>

@@ -15,7 +15,7 @@ export default function CoursesPage() {
       {/* Header Banner */}
       <section className="pt-32 pb-16 bg-gradient-cta bg-cover bg-center">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="font-headline font-bold text-5xl text-white mb-4">Courses & Services</h1>
+          <h1 className="font-headline font-bold text-4xl md:text-5xl text-white mb-4">Courses & Services</h1>
           <p className="text-white/90 max-w-3xl mx-auto">
             From your first tandem flight to becoming a certified paraglider pilot, 
             we offer a range of courses and services for all experience levels.
@@ -79,7 +79,7 @@ export default function CoursesPage() {
                   <span className="bg-primary text-primary-foreground w-10 h-10 rounded-full flex items-center justify-center mr-3">1</span>
                   P1 Basic Course (5 Days)
                 </h3>
-                <div className="ml-12 space-y-6">
+                <div className="ml-6 md:ml-12 space-y-6">
                   <div className="bg-card p-6 rounded-xl shadow-md">
                     <h4 className="font-headline font-semibold text-xl text-foreground mb-3">Day 1-2: Introduction & Ground Handling</h4>
                     <ul className="space-y-2 text-muted-foreground">
@@ -142,7 +142,7 @@ export default function CoursesPage() {
                   <span className="bg-primary text-primary-foreground w-10 h-10 rounded-full flex items-center justify-center mr-3">2</span>
                   P2 Intermediate Course (7 Days)
                 </h3>
-                <div className="ml-12 space-y-6">
+                <div className="ml-6 md:ml-12 space-y-6">
                   <div className="bg-card p-6 rounded-xl shadow-md">
                     <h4 className="font-headline font-semibold text-xl text-foreground mb-3">Day 1-2: Advanced Theory & Flight Planning</h4>
                     <ul className="space-y-2 text-muted-foreground">
@@ -205,7 +205,7 @@ export default function CoursesPage() {
                   <span className="bg-accent text-accent-foreground w-10 h-10 rounded-full flex items-center justify-center mr-3">3</span>
                   P3 Pilot Certification (10 Days)
                 </h3>
-                <div className="ml-12 space-y-6">
+                <div className="ml-6 md:ml-12 space-y-6">
                   <div className="bg-card p-6 rounded-xl shadow-md">
                     <h4 className="font-headline font-semibold text-xl text-foreground mb-3">Day 1-3: Advanced Theory & Safety Training</h4>
                     <ul className="space-y-2 text-muted-foreground">
