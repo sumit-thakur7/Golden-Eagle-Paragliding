@@ -4,26 +4,27 @@ import { motion } from "framer-motion";
 import AnimatedSection from "@/components/AnimatedSection";
 import { galleryData } from "@/lib/gallery-data";
 import GalleryImage from "@/components/GalleryImage";
+import YouTubeEmbed from "@/components/YouTubeEmbed";
 
 export default function GalleryPage() {
   const videos = [
     {
-      url: "https://www.youtube.com/embed/LU6EkmPP-iM",
+      id: "LU6EkmPP-iM",
       title: "Soaring Above Bir Billing",
       description: "Experience the magnificent views of the Himalayas from a paraglider's perspective."
     },
     {
-      url: "https://www.youtube.com/embed/3PtZUDY8M4E",
+      id: "3PtZUDY8M4E",
       title: "Learning to Paraglide",
       description: "Follow the journey of a student learning to paraglide with our experienced instructors."
     },
     {
-      url: "https://www.youtube.com/embed/6XQAghJhkE4",
+      id: "6XQAghJhkE4",
       title: "Sunset Paragliding Magic",
       description: "The most beautiful time to fly is during sunset, with golden light bathing the landscape."
     },
     {
-      url: "https://www.youtube.com/embed/l7KeSCQ5GS8",
+      id: "l7KeSCQ5GS8",
       title: "Cross Country Adventure",
       description: "Follow our advanced pilots as they navigate a challenging cross-country route."
     }
@@ -95,17 +96,8 @@ export default function GalleryPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {videos.map((video, index) => (
                 <div key={index} className="bg-card p-4 rounded-xl shadow-lg">
-                  <div className="aspect-video overflow-hidden rounded-lg mb-4">
-                    <iframe 
-                      width="100%" 
-                      height="100%" 
-                      src={video.url} 
-                      title={video.title} 
-                      frameBorder="0" 
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                      allowFullScreen
-                      className="w-full h-full object-cover"
-                    ></iframe>
+                  <div className="mb-4">
+                    <YouTubeEmbed videoId={video.id} title={video.title} />
                   </div>
                   <h3 className="font-headline font-bold text-xl text-foreground mb-2">{video.title}</h3>
                   <p className="text-muted-foreground">{video.description}</p>
