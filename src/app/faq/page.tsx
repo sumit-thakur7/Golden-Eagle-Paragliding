@@ -1,9 +1,4 @@
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from '@/components/ui/accordion';
+import AccordionCard from '@/components/AccordionCard';
 
 const faqs = [
   {
@@ -37,18 +32,11 @@ export default function FaqPage() {
         <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">Have questions? We have answers. Here are some of the most common inquiries we receive.</p>
       </div>
       <div className="w-full max-w-3xl mx-auto">
-        <Accordion type="single" collapsible className="w-full">
+        <div>
           {faqs.map((faq, index) => (
-            <AccordionItem key={index} value={`item-${index}`}>
-              <AccordionTrigger className="text-left font-headline">
-                {faq.question}
-              </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground">
-                {faq.answer}
-              </AccordionContent>
-            </AccordionItem>
+            <AccordionCard key={index} question={faq.question} answer={faq.answer} />
           ))}
-        </Accordion>
+        </div>
       </div>
     </main>
   );
