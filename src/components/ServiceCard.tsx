@@ -12,6 +12,7 @@ interface ServiceCardProps {
   features: string[];
   price: string;
   image: string;
+  actionText: string;
   index?: number;
 }
 
@@ -22,6 +23,7 @@ const ServiceCard: FC<ServiceCardProps> = ({
   features,
   price,
   image,
+  actionText,
   index = 0,
 }) => {
   const cardVariants = {
@@ -51,14 +53,14 @@ const ServiceCard: FC<ServiceCardProps> = ({
 
   return (
     <motion.div 
-      className="bg-card rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition"
+      className="bg-card rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition flex flex-col h-full"
       variants={cardVariants}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-50px" }}
       whileHover={{ y: -8, transition: { duration: 0.3 } }}
     >
-      <div className="h-64 overflow-hidden">
+      <div className="h-64 overflow-hidden flex-shrink-0">
         <Image 
           src={image} 
           alt={title}
@@ -68,7 +70,7 @@ const ServiceCard: FC<ServiceCardProps> = ({
           className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
         />
       </div>
-      <div className="p-6">
+      <div className="p-6 flex flex-col flex-grow">
         <div className="flex justify-between items-center mb-3">
           <h3 className="font-headline font-bold text-xl text-foreground">{title}</h3>
           <span className={`px-3 py-1 rounded-full text-sm font-medium ${getLevelColor(level)}`}>
@@ -84,11 +86,11 @@ const ServiceCard: FC<ServiceCardProps> = ({
             </li>
           ))}
         </ul>
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center mt-auto">
           <span className="font-headline font-bold text-2xl text-foreground">{price}</span>
           <Link href="/booking">
               <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-sans rounded-full">
-                Book Now
+                {actionText}
               </Button>
           </Link>
         </div>
