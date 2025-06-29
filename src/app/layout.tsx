@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Inter, Space_Grotesk } from 'next/font/google';
+import { Poppins, Montserrat } from 'next/font/google';
 import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 import { cn } from '@/lib/utils';
@@ -7,14 +7,16 @@ import Header from '@/components/header';
 import Footer from '@/components/footer';
 import ScrollToTop from '@/components/ScrollToTop';
 
-const inter = Inter({ 
+const poppins = Poppins({ 
   subsets: ['latin'],
-  variable: '--font-inter',
+  variable: '--font-poppins',
+  weight: ['400', '500', '600', '700']
 });
 
-const spaceGrotesk = Space_Grotesk({
+const montserrat = Montserrat({
   subsets: ['latin'],
-  variable: '--font-space-grotesk',
+  variable: '--font-montserrat',
+  weight: ['600', '700', '800']
 });
 
 export const metadata: Metadata = {
@@ -31,8 +33,8 @@ export default function RootLayout({
     <html lang="en" className="!scroll-smooth">
       <body className={cn(
           "min-h-screen bg-background font-sans antialiased",
-          inter.variable,
-          spaceGrotesk.variable
+          poppins.variable,
+          montserrat.variable
         )}>
         <div className="relative flex min-h-screen flex-col">
           <Header />
