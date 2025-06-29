@@ -92,7 +92,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* Tandem Flight Experience */}
               <div className="bg-card rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
                 <div className="h-64 overflow-hidden">

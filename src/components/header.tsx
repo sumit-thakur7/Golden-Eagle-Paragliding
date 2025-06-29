@@ -64,7 +64,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-6 items-center">
+          <div className="hidden lg:flex space-x-6 items-center">
             {navLinks.map((link) => (
               <Link key={link.href} href={link.href} className={cn(
                 "nav-link font-medium transition-colors relative",
@@ -80,7 +80,7 @@ export default function Header() {
           </div>
 
           {/* Book Now Button (Desktop) */}
-          <Link href="/booking" className="hidden md:block">
+          <Link href="/booking" className="hidden lg:block">
             <Button className="px-6 py-2 bg-primary text-primary-foreground font-sans font-medium rounded-full hover:bg-primary/90 transition">
               Book Now
             </Button>
@@ -89,7 +89,7 @@ export default function Header() {
           {/* Mobile Menu */}
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="md:hidden text-foreground text-2xl">
+              <Button variant="ghost" size="icon" className="lg:hidden text-foreground text-2xl">
                 <Menu />
                 <span className="sr-only">Toggle menu</span>
               </Button>

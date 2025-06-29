@@ -50,7 +50,7 @@ export default function TestimonialsPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {testimonialData.featured.map((testimonial, index) => (
                 <div key={index} className="bg-card p-8 rounded-xl shadow-lg relative">
                   <div className="text-primary text-6xl sm:text-8xl absolute -top-4 left-4 opacity-10 font-serif">"</div>

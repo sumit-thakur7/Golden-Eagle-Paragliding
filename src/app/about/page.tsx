@@ -95,7 +95,7 @@ export default function AboutPage() {
       <AnimatedSection>
         <section className="py-12 md:py-16 bg-muted">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 text-center">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8 text-center">
               <div className="bg-card p-4 sm:p-8 rounded-xl shadow-lg hover:shadow-xl transition">
                 <p className="font-headline font-bold text-3xl sm:text-4xl md:text-5xl text-primary mb-2">15+</p>
                 <p className="text-muted-foreground font-medium text-sm sm:text-base">Years of Experience</p>
@@ -131,7 +131,7 @@ export default function AboutPage() {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <FeatureCard 
                 icon={<Target />}
                 title="Our Mission"
