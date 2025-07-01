@@ -130,7 +130,8 @@ export default function ContactPage() {
                         <h3 className="font-semibold text-foreground mb-1">
                           Phone Number
                         </h3>
-                        <p>+91 97363-33303</p>
+                        <p>+91 7590070900</p>
+                        <p>+91 9816577607</p>
                       </div>
                     </div>
 
@@ -143,6 +144,8 @@ export default function ContactPage() {
                           Email Address
                         </h3>
                         <p>info@geparagliding.org</p>
+                        <p>sunny_aero_7@yahoo.com</p>
+                        <p>sunnyaero7@gmail.com</p>
                       </div>
                     </div>
 
@@ -168,8 +171,9 @@ export default function ContactPage() {
                   </h2>
                   <div className="flex flex-wrap gap-4">
                     <a
-                      href="#"
+                      href="https://www.facebook.com/geparagliding/"
                       aria-label="Facebook"
+                      target="_blank"
                       className="bg-[#3b5998] text-white p-3 rounded-full hover:opacity-90 transition"
                     >
                       <Facebook />
@@ -177,20 +181,23 @@ export default function ContactPage() {
                     <a
                       href="#"
                       aria-label="Twitter"
+                      target="_blank"
                       className="bg-[#1da1f2] text-white p-3 rounded-full hover:opacity-90 transition"
                     >
                       <Twitter />
                     </a>
                     <a
-                      href="#"
+                      href="https://www.instagram.com/goldeneagleparagliding/?hl=en"
                       aria-label="Instagram"
+                      target="_blank"
                       className="bg-gradient-to-r from-yellow-500 via-pink-500 to-purple-600 text-white p-3 rounded-full hover:opacity-90 transition"
                     >
                       <Instagram />
                     </a>
                     <a
-                      href="#"
+                      href="https://www.youtube.com/@Golden_eagle_paraglaiding/"
                       aria-label="Youtube"
+                      target="_blank"
                       className="bg-[#ff0000] text-white p-3 rounded-full hover:opacity-90 transition"
                     >
                       <Youtube />
