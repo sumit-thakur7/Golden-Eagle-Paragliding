@@ -24,6 +24,7 @@ import {
 import { useToast } from "@/hooks/use-toast";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Shield, Clock, MapPin, Truck } from "lucide-react";
+import emailjs from "@emailjs/browser";
 
 const bookingFormSchema = z.object({
   fullName: z.string().min(2, "Full name must be at least 2 characters."),
@@ -101,14 +102,39 @@ export default function BookingPage() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof bookingFormSchema>) {
-    console.log("Booking Request:", values);
-    toast({
-      title: "Booking Request Received!",
-      description: "We'll contact you shortly to confirm your adventure.",
-    });
-    form.reset();
-  }
+  const onSubmit = async (values: z.infer<typeof bookingFormSchema>) => {
+    const serviceId = "service_k9xu05y";
+    const templateId = "template_hddb3nj";
+    const publicKey = "3JoQU2AyHwNebZk3z";
+
+    const templateParams = {
+      fullName: values.fullName,
+      email: values.email,
+      phone: values.phone,
+      service: values.service,
+      date: values.date,
+      time: values.time,
+      participants: values.participants,
+      message: values.message,
+    };
+
+    try {
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      toast({
+        title: "Booking Request Received!",
+        description: "We'll contact you shortly to confirm your adventure.",
+      });
+      form.reset();
+    } catch (error) {
+      console.error("EmailJS Error:", error);
+      toast({
+        title: "Error Sending Request",
+        description:
+          "There was an issue sending your booking request. Please try again later.",
+        variant: "destructive",
+      });
+    }
+  };
 
   return (
     <div>

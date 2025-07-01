@@ -52,9 +52,9 @@ export default function ContactPage() {
   });
 
   const onSubmit = async (values: z.infer<typeof contactFormSchema>) => {
-    const serviceId = "service_ptcviqi";
-    const templateId = "template_rdncw0b";
-    const publicKey = "Ne5Ky2upxlxkde8io";
+    const serviceId = "service_k9xu05y";
+    const templateId = "template_hddb3nj";
+    const publicKey = "3JoQU2AyHwNebZk3z";
 
     const templateParams = {
       from_name: values.name,
