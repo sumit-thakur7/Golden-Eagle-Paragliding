@@ -57,8 +57,8 @@ export default function ContactPage() {
     const publicKey = "Ne5Ky2upxlxkde8io";
 
     const templateParams = {
-      name: values.name,
-      email: values.email,
+      from_name: values.name,
+      from_email: values.email,
       phone: values.phone,
       subject: values.subject,
       message: values.message,
