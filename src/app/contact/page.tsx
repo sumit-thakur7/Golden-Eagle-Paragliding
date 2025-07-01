@@ -18,6 +18,7 @@ import { useToast } from "@/hooks/use-toast";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Mail, MapPin, Phone, Clock, Facebook, Twitter, Instagram, Youtube } from "lucide-react";
 import Link from "next/link";
+import emailjs from '@emailjs/browser';
 
 const contactFormSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters."),
@@ -41,13 +42,35 @@ export default function ContactPage() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof contactFormSchema>) {
-    console.log(values);
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for your message. We'll get back to you soon.",
-    });
-    form.reset();
+  async function onSubmit(values: z.infer<typeof contactFormSchema>) {
+    const serviceId = 'service_ptcviqi';
+    const templateId = 'template_rdncw0b';
+    const publicKey = 'Ne5Ky2upxlxkde8io';
+
+    // The template params object keys should match the variables in your EmailJS template
+    const templateParams = {
+        name: values.name,
+        email: values.email,
+        phone: values.phone,
+        subject: values.subject,
+        message: values.message,
+    };
+
+    try {
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      toast({
+        title: "Message Sent!",
+        description: "Thank you for your message. We'll get back to you soon.",
+      });
+      form.reset();
+    } catch (error) {
+      console.error("EmailJS Error:", error);
+      toast({
+        title: "Error Sending Message",
+        description: "There was an issue sending your message. Please try again later.",
+        variant: "destructive",
+      });
+    }
   }
 
   return (
