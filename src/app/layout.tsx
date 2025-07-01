@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Inter, Space_Grotesk as SpaceGrotesk } from 'next/font/google';
+import { Lato, Montserrat } from 'next/font/google';
 import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 import { cn } from '@/lib/utils';
@@ -8,16 +8,16 @@ import Footer from '@/components/footer';
 import ScrollToTop from '@/components/ScrollToTop';
 import CursorIcon from '@/components/CursorIcon';
 
-const inter = Inter({ 
+const lato = Lato({ 
   subsets: ['latin'],
-  variable: '--font-inter',
-  weight: ['400', '500', '600', '700']
+  variable: '--font-lato',
+  weight: ['400', '700']
 });
 
-const spaceGrotesk = SpaceGrotesk({
+const montserrat = Montserrat({
   subsets: ['latin'],
-  variable: '--font-space-grotesk',
-  weight: ['400', '500', '600', '700']
+  variable: '--font-montserrat',
+  weight: ['400', '500', '600', '700', '800', '900']
 });
 
 export const metadata: Metadata = {
@@ -34,8 +34,8 @@ export default function RootLayout({
     <html lang="en" className="!scroll-smooth">
       <body className={cn(
           "min-h-screen bg-background font-sans antialiased",
-          inter.variable,
-          spaceGrotesk.variable
+          lato.variable,
+          montserrat.variable
         )}>
         <div className="relative flex min-h-screen flex-col">
           <Header />

@@ -18,8 +18,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['var(--font-inter)', ...fontFamily.sans],
-        headline: ['var(--font-space-grotesk)', ...fontFamily.sans],
+        sans: ['var(--font-lato)', ...fontFamily.sans],
+        headline: ['var(--font-montserrat)', ...fontFamily.sans],
       },
       colors: {
         background: 'hsl(var(--background))',
