@@ -89,7 +89,3 @@ const nextConfig: NextConfig = {
 export default nextConfig;
 
 
-const nextConfig = {
-  output: "export",
-};
-module.exports = nextConfig;
