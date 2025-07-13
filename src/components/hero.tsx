@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
 
+
 export default function Hero() {
   return (
     <section className="relative h-screen flex items-center justify-center text-center text-white">
