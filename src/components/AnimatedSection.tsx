@@ -7,6 +7,10 @@ const AnimatedSection = ({ children }: { children: React.ReactNode }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
+
+
+
+  
   return (
     <div ref={ref}>
       <motion.div
